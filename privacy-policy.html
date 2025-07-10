@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Privacy Policy</title>
+
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .header {
+      position: fixed;
+      width: 100%;
+      padding: 20px 40px;
+      background: transparent;
+      color: white;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    .title-text {
+      position: absolute;
+      top: 65%;
+      /* Move it lower vertically */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      color: white;
+      font-size: 3em;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .spaced-paragraph {
+      line-height: 1.7;
+    }
+
+    .spaced-paragraph ul li {
+      margin-bottom: 0.5rem;
+    }
+
+
+    .header.scrolled {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .navmenu ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navmenu a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown ul {
+      display: none;
+      position: absolute;
+      background: #222;
+      padding: 10px 0;
+      border-radius: 4px;
+    }
+
+    .dropdown:hover ul {
+      display: block;
+    }
+
+    .page-title {
+      position: relative;
+      height: 325px;
+      /* or even more if needed */
+      background: url("assets/img/privacy-policy-banner.jpg") center/cover no-repeat;
+      padding: 120px 20px 60px;
+      text-align: center;
+      color: white;
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+    .page-title::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(60, 60, 60, 0.6);
+      z-index: -1;
+    }
+
+    .raleway-light {
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .content-section {
+      margin: 40px auto;
+      max-width: 960px;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+      /* Add the font class here */
+      font-family: "Raleway", sans-serif;
+      font-weight: 400;
+      /* or 300, 600, 700 based on your choice */
+      font-style: normal;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .content-section h3 {
+      color: #000000;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      font-weight: 600;
+      /* You can use semibold for headers */
+      font-family: "Raleway", sans-serif;
+    }
+
+
+
+    footer {
+      background-color: #111;
+      color: #aaa;
+      padding: 40px 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .social-links a {
+      color: #aaa;
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    .social-links a:hover {
+      color: #0d397f;
+    }
+
+    @media (max-width: 767px) {
+      .pricing .pricing-item {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 320px;
+        /* or 90%, or any width you want */
+        padding: 1rem 1.5rem;
+        /* add some horizontal padding */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="DAD Capitals Logo" style="max-height: 40px; margin-right: 10px;">
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="introducing-broker.html">Introducing Broker</a></li>
+          <li><a href="index.html#services">Education</a></li>
+          <li class="dropdown"><a href="javascript:void(0)"><span>Legal Terms</span><i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="trading-conditions.html">Trading conditions</a></li>
+              <li><a href="client-agreement.html">Client agreement</a></li>
+              <li><a href="restricted-countries.html">Restricted countries</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="javascript:void(0)"><span>Account Types</span><i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="standard.html">Standard Account</a></li>
+              <li><a href="pro.html">Pro Account</a></li>
+              <li><a href="premium.html">Premium Account</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-title" style="font-size: 2em; font-weight: bold; margin-bottom: 20px;">
+    Privacy Policy
+    <p style="font-size: 16px; font-weight: normal; margin-top: 5px;">
+      Your privacy is important to us. This policy explains how we collect, use, and protect your information.
+    </p>
+  </div>
+
+
+  <!-- Main Content -->
+  <div class="content-section"
+    style="max-width:800px; margin:auto; font-family: Arial, sans-serif; line-height:1.6; color:#333;">
+
+    <h2>AGREEING TO THIS PRIVACY POLICY</h2>
+    <p>By accessing our website and using our services, you consent to the collection, storage, use, and disclosure of
+      your personal information in accordance with this Policy.</p>
+
+    <br>
+
+    <h2>WHAT PERSONAL INFORMATION DO WE COLLECT</h2>
+    <p class="spaced-paragraph">
+      As part of providing our products and services to you, we are required by AML Law (the Prevention and Suppression
+      of Money laundering and Terrorist Financing Law as amended from time to time) to execute Know Your Customer (KYC)
+      checks in order to verify your identity before we set you up as a client and we use those details to effectively
+      manage your account with us to ensure that you get the best possible service.
+    </p>
+
+    <p class="spaced-paragraph">
+      If you are an actual or potential client, we may collect the following types of information about you depending on
+      your stage in the customer journey:
+    </p>
+
+    <p class="spaced-paragraph">
+      Identity data including title, first name, last name, date of birth, gender, account number or similar identifier,
+      a copy of your national identity card or passport or driving license.
+    </p>
+
+    <p class="spaced-paragraph">
+      Contact data including billing address, a copy of a recent utility bill/bank statement (or similar) as evidence of
+      your residential address, e-mail address and telephone number.
+    </p>
+
+    <p class="spaced-paragraph">
+      Information about your source of income and wealth including details about your assets and liabilities, account
+      balances, trading statements, tax and financial statements, Tax residence and Tax Identification Number,
+      government-issued documentation, employment and profession details, knowledge and experience in trading, risk
+      tolerance and risk profile and other information we may consider necessary to our functions and activities in
+      order to be in a position and be permitted to provide our services to you.
+    </p>
+
+    <p class="spaced-paragraph">
+      Technical data including application software, internet protocol (IP) address, browser type and version, time zone
+      setting and location, browser plug-in types and versions, operating system and platform and other technology on
+      the devices you use to access our websites or applications.
+    </p>
+
+    <p class="spaced-paragraph">
+      Financial data including user ID tokens from payment service providers, bank account details and payment card
+      details.
+    </p>
+
+    <p class="spaced-paragraph">
+      Profile data including your username and password, trading performance, transaction data, notes, your interests,
+      preferences, customer feedback, survey responses, internet chats and telephone recordings.
+    </p>
+
+    <p class="spaced-paragraph">
+      Usage data including information about how you use our website, products, and services.
+    </p>
+
+    <p class="spaced-paragraph">
+      Marketing and communications data including your preferences in receiving marketing from us and our third parties
+      and your communication preferences.
+    </p>
+
+    <p class="spaced-paragraph">
+      In case you are a corporate client we are required to collect information related to the legal entity (e.g.
+      corporate and constitutional documents), additional personal information on the shareholders, directors and other
+      officers that we deem as necessary in order to be compliant with our legal and regulatory requirements.
+    </p>
+
+    <p class="spaced-paragraph">
+      If the Company requests you to provide it with personal information and you fail to do so, the Company may not be
+      in a position to provide a service and/or enter into an agreement with you, in which case it will inform you
+      accordingly.
+    </p>
+    <br>
+
+    <h2>HOW THE DATA IS COLLECTED</h2>
+
+    <p class="spaced-paragraph">
+      We obtain this information in a number of ways through your use of our services or other dealings with us
+      including through any of our websites, account opening applications, contact forms, telephone, internet chat
+      systems, our demo sign up forms and information provided in the course of ongoing client service correspondence.
+    </p>
+
+    <p class="spaced-paragraph">
+      We may also collect information about you from third parties either through customer due diligence providers,
+      sanctions screening providers, credit reference agencies, publicly available sources or screened third party data
+      lists.
+    </p>
+
+    <p class="spaced-paragraph">
+      We also keep records of your trading behavior, including a record of:
+    </p>
+
+    <p>
+      Suspicious transactions and orders.
+    </p>
+
+    <p>
+      Your preference for certain types of products and services.
+    </p>
+
+    <p>
+      Your financial transactions, the products you trade with us and their performance.
+    </p>
+
+    <p>
+      Historical data about the trades and investments you have made including the amount invested.
+    </p>
+    <br>
+
+    <h2>USE OF DATA</h2>
+
+    <p class="spaced-paragraph">
+      We gather, process and manage the information which allows us to perform our contractual obligations with you and
+      to be compliant with our legal obligations. Below are the purposes for which your personal information is
+      processed.
+    </p>
+    <br>
+
+    <h2>PERFOMANCE OF A CONTRACT</h2>
+
+    <p class="spaced-paragraph">
+      We process your data to provide you with our services and products, and to be able to complete our acceptance
+      procedure in order to enter into a contractual relationship with our clients. In order to complete our client
+      on-boarding we need to verify your identity, perform the customer due diligence as per the regulatory obligations,
+      and we need to use the acquired details to effectively manage your trading account with <strong>DAD
+        Capitals</strong>.
+    </p>
+    <br>
+
+    <h2>COMPLIANCE WITH A LEGAL OBLIGATION</h2>
+    <p class="spaced-paragraph">
+      A number of legal obligations are imposed by relevant laws to which we are subject, as well as statutory
+      requirements, e.g., anti-money laundering laws, financial services laws, corporation laws, privacy laws and tax
+      laws.
+    </p>
+    <br>
+
+    <h2>FOR THE PURUPOSE OF SAFEGUARDING LEGITIMATE INTERESTS</h2>
+    <p class="spaced-paragraph">
+      <strong>DAD Capitals</strong> processes personal data so as to safeguard the legitimate interests pursued by us or
+      by a third party, where the legitimate interest is when we have a business or commercial reason to use your
+      information. Nevertheless, it must not go unfairly against you and what is best for you. Examples of such
+      processing activities include:
+    </p>
+
+
+    <p class="spaced-paragraph">
+      Initiating court proceedings and preparing our defense in litigation procedures.
+    </p>
+
+    <p class="spaced-paragraph">
+      Means and processes we undertake to provide for the Company’s IT and system security, preventing potential
+      crime, asset security, admittance controls and anti-trespassing measures.
+    </p>
+
+    <p class="spaced-paragraph">
+      Measures to manage business and for further developing products and services.
+    </p>
+
+    <p class="spaced-paragraph">
+      Risk management.
+    </p>
+    <br>
+
+    <h2>FOR INTERNAL BUSINESS PURPOSES AND RECORD KEEPING</h2>
+    <p class="spaced-paragraph">
+      It may be required to process your personal data for internal business and record keeping purposes, which is in
+      our own legitimate interest and is required in order to comply with our legal obligations. We will also keep
+      records in order to ensure that you comply with your contractual obligations pursuant to the agreement governing
+      our relationship with you.
+    </p>
+
+
+    <p class="spaced-paragraph">
+      We may record any communications, electronic, by telephone, in person or otherwise, that we have with you in
+      relation to the services we provide to you and our relationship with you.
+    </p>
+
+    <p class="spaced-paragraph">
+      These recordings will be our sole property and will constitute evidence of the communications between us.
+    </p>
+    <br>
+
+    <h2>FOR LEGAL NOTIFICATIONS</h2>
+    <p class="spaced-paragraph">
+      Occasionally, the law requires us to advise you of certain changes to products and/or services or laws. We may
+      need to inform you of the changes related to our products and services, therefore we will be obliged to process
+      your personal information to send you the legal notifications. You will continue to receive this information even
+      if you opt not to receive direct marketing information from us.
+    </p>
+    <br>
+
+    <h2>FOR MARKETING PURPOSES</h2>
+    <p class="spaced-paragraph">
+      We may use your data for research and analysis purposes, and your trading history in order to deliver any
+      analysis, reports, campaigns that may interest you to your registered e-mail address. In some cases, profiling is
+      used, i.e., we process your data automatically with the aim of evaluating certain personal aspects in order to
+      provide you with targeted marketing information on products. We can only use your personal data to promote our
+      products and services to you if we have your explicit consent to do so or, in certain cases, if we consider that
+      it is in our legitimate interest to do so.
+    </p>
+
+    <p class="spaced-paragraph">
+      Please note that you always have the right to change your option in case that you do not wish to receive such
+      communications any longer.
+    </p>
+    <br>
+
+    <h2>TO ASSIST US IN IMPROVING OUR PRODUCTS AND SERVICES</h2>
+    <p class="spaced-paragraph">
+      We may use the personal information provided by you to ensure the highest standards when providing our products
+      and services.
+    </p>
+
+    <p class="spaced-paragraph">Information already in the public domain, or already possessed by the Company without a
+      duty of confidentiality will not be regarded as confidential.
+    </p>
+    <br>
+
+    <h2>DISCLOSURE OF YOUR PERSONAL INFORMATION</h2>
+
+    <p class="spaced-paragraph">
+      The Company has the right to disclose Client information (including recordings and documents of a confidential
+      nature, card details) in the following circumstances:
+    </p>
+
+    <div class="spaced-paragraph">
+      <ul>
+        <li>Where required by law or a court order by a competent Court.</li>
+        <li>Where requested by FSC or any other regulatory authority having control or jurisdiction over the Company or
+          the Client or their associates or in whose territory the Company has Clients.</li>
+        <li>To government bodies and law enforcement agencies where required by law and in response to other legal and
+          regulatory requests.</li>
+        <li>To relevant authorities to investigate or prevent fraud, money laundering or other illegal activity.</li>
+        <li>Where necessary in order for the Company to defend or exercise its legal rights to any court or tribunal or
+          arbitrator or governmental authority.</li>
+        <li>To such an extent as reasonably required so as to execute Orders and for purposes ancillary to the provision
+          of the Services.</li>
+        <li>To payment service providers and banks processing your transactions.</li>
+        <li>To auditors or contractors or other advisers auditing, assisting with or advising on any of our business
+          purposes; provided that in each case the relevant professional shall be informed about the confidential nature
+          of such information and commit to the confidentiality herein obligations as well.</li>
+        <li>Only to the extent required and only the contact details to other service providers who create, maintain or
+          process databases (whether electronic or not), offer record keeping services, e-mail transmission services,
+          messaging services or similar services which aim to assist the Company collect, storage, process and use
+          Client information or get in touch with the Client or improve the provision of the Services under this
+          Agreement.</li>
+        <li>Only to the extent required, to other service providers for statistical purposes in order to improve the
+          Company’s marketing, in such a case the data will be provided in an aggregate form.</li>
+        <li>Only to the extent required, to market research call centres that provide telephone or email surveys with
+          the purpose to improve the services of the Company, in such a case only the contact details will be provided.
+        </li>
+        <li>Where necessary in order for the Company to defend or exercise its legal rights to any court or tribunal or
+          arbitrator or Ombudsman or governmental authority.</li>
+        <li>To anyone authorised by you.</li>
+        <li>To an Affiliate or introducing broker of the Company or any other company in the same group of the Company.
+        </li>
+        <li>To any third-party where such disclosure is required in order to enforce or apply our Terms and Conditions
+          or other relevant agreements.</li>
+        <li>To successors or assignees or transferees or buyers, with ten Business Days prior Written Notice to the
+          Client; this will happen in the event that the Company decides to sell, transfer, assign or novate to a third
+          party any or all of its rights, benefits or obligations under the Agreement with you or the performance of the
+          entire Agreement subject to providing 10 Business Days Prior Written Notice to the Client. This may be done
+          without limitation in the event of merger or acquisition of the Company with a third party, reorganisation of
+          the Company, winding up of the Company or sale or transfer of all or part of the business or the assets of the
+          Company to a third party.</li>
+      </ul>
+    </div>
+    <br>
+
+    <h2>HOW LONG YOUR PERSONAL INFORMATION WILL BE KEPT</h2>
+    <p>We will keep your personal information while you have an account with us, or we are providing information,
+      products, or services to you. Thereafter, we will keep your personal information for as long as is necessary:</p>
+    <ul>
+      <li>To respond to any questions, complaints or claims made by you or on your behalf.</li>
+      <li>To show that we have acted in accordance with the law.</li>
+      <li>To keep records as required by law.</li>
+    </ul>
+    <p>We will not retain your personal information for longer than necessary for the purposes set out in this policy.
+      Different retention periods apply for different types of personal information and when it is no longer necessary
+      to retain your personal information, we will delete or anonymize it.</p>
+    <br>
+
+    <h2>PROTECTION OF INFORMATION</h2>
+    <p>Safeguarding your personal information is important to us, whether you interact with us personally, via
+      telephone, e-mail, post, over the internet or by any other electronic medium. We follow strict security procedures
+      and protocols in connection with the storage, processing, and disclosure of your information, to prevent your
+      personal data from being accidentally lost, used, or accessed in an unauthorised way, altered, or disclosed. We
+      also have procedures in place to deal with any suspected or actual data security breach and will notify you and
+      any applicable regulator of a data security breach where we are legally required to do so.</p>
+    <p>Where we share your information with a third party (which we will only do in accordance with this privacy
+      policy), we will ensure that the security measures employed by any such third party in relation to the storage and
+      processing of your information are at least as rigorous as those employed by us. Additionally, the <strong>DAD
+        Capitals</strong> limits access to the Client’s personal data to those employees, agents, contractors and other
+      third parties who have a business need to know. They will only process the Client’s personal data on the
+      <strong>DAD Capitals</strong>’ instructions, and they are subject to a duty of confidentiality.
+    </p>
+    <p>We continually review our systems and follow best practice industry standards for information security.</p>
+    <br>
+
+    <h2>YOUR RIGHTS AS A DATA SUBJECT</h2>
+    <ul>
+      <li><strong>Right of access</strong> – you have the right to request from us to provide you with a copy of the
+        personal information that we hold about you.</li>
+      <p></p>
+      <li><strong>Right of rectification</strong> – you have a right to request from us to correct the personal
+        information we hold about you that is inaccurate or incomplete.</li>
+      <p></p>
+      <li><strong>Right to be forgotten</strong> – you have a right to request from us in certain circumstances to erase
+        your personal information from our records. In case that these circumstances apply to your case and provided
+        that no exception to this obligation applies the Company acting as your controller will erase your personal
+        information from its records.</li>
+      <p></p>
+      <li><strong>Right to restriction of processing</strong> – you have a right to request from us where certain
+        conditions apply, to restrict the processing of your personal information.</li>
+      <p></p>
+      <li><strong>Right of portability</strong> – you have the right to request from us where certain conditions apply,
+        to have the data we hold about you transferred to another organisation. Where these conditions apply the
+        <strong>DAD Capitals</strong> will transfer your personal data to another organization.
+      </li>
+      <p></p>
+
+      <li><strong>Right to object</strong> – you have the right to object on grounds relating to your particular
+        situation, to certain types of processing such as direct marketing or where we are relying on a legitimate
+        interest (or those of a third party) and there is something about your particular situation which makes you
+        want to object to processing on this ground as you feel it impacts on your fundamental rights and freedoms. In
+        some cases, we may demonstrate that we have compelling legitimate grounds to process your information which
+        override your rights and freedoms.</li>
+      <p></p>
+      <li><strong>Right to request the transfer of your personal data to you or to a third party</strong> – We will
+        provide to you, or a third party you have chosen, your personal data in a structured, commonly used,
+        machine-readable format. Note that this right only applies to automated information which you initially
+        provided consent for us to use or where we used the information to perform a contract with you.</li>
+      <p></p>
+      <li><strong>Right to withdraw consent</strong> – where we are relying on consent to process your personal data.
+        However, this will not affect the lawfulness of any processing carried out before you withdraw your consent.
+        If you withdraw your consent, we may not be able to provide certain products or services to you. We will
+        advise you if this is the case at the time you withdraw your consent.</li>
+      <p></p>
+      <p>We may charge you a reasonable fee when a request is manifestly unfounded, excessive or repetitive, or we
+        receive a request to provide further copies of the same data. In this case we will send you a fee request
+        which you will have to accept prior to us processing your request. Alternatively, we may refuse to comply with
+        your request in these circumstances.</p>
+    </ul>
+    </li>
+    </ul> <br>
+
+    <h2>COOKIES</h2>
+    <p>
+      The <strong>DAD Capitals</strong> uses Cookies for its website. Cookies are small files which are stored on a
+      user's computer.
+      They are designed to hold a modest amount of data specific to a particular client and website and can be
+      accessed either by the web server or the client computer. Cookies may be used on some pages of the Site for
+      us to provide Site users with a more customized web browsing experience.
+    </p>
+    <br>
+
+    <h2>POLICY REVIEW AND CHANGES</h2>
+    <p>
+      Our privacy policy will be reviewed from time to time to take account any new obligations, technological
+      advancements, changes to our operations or practices and to make sure it remains appropriate to the changing
+      regulatory landscape. We may make changes to this Policy from time to time and it is important that you check
+      this Policy for any updates on the <strong>DAD Capitals</strong> website. The <strong>DAD Capitals</strong> will
+      keep on its website all the versions
+      of this Privacy Policy for your reference. Any personal information we hold will be governed by our current
+      Privacy Policy. Please note that this policy is addressed to customers and potential customers.
+    </p> <br>
+
+    <h2>CONTACTING US ABOUT THIS POLICY OR MAKING A COMPLAINT</h2>
+    <p>
+      If you have any queries about the contents of this Policy, or wish to inform us of a change or correction to your
+      personal information/data, would like a copy of the data we collect on you or would like to raise a complaint or
+      comment, please contact our team: <a href="mailto:support@dadcapitals.com" color=blue>support@dadcapitals.com</a>
+    </p>
+    <p>
+      We will try to respond to your request without undue delay and in any case within one month of receipt of the
+      request. In case that your request takes us longer than one month we will notify you accordingly and keep you
+      updated. In this respect it should be noted that the information to be provided as a result of exercising your
+    </p> <br>
+  </div>
+  <!-- Footer -->
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <p style="font-size: 13px; color: #ccc; line-height: 1.7; margin: 0 auto 30px auto;">
+        <strong>Risk Disclosure:</strong> Trading in forex, cryptocurrencies, commodities, and other financial
+        instruments involves a high level of risk and may not be suitable for all investors. The value of your
+        investments can go up or down, and you may lose more than your initial capital. Before engaging in any trading
+        activities, please ensure you fully understand the risks involved, including the potential for significant
+        financial loss. Leverage can work both for and against you. You are strongly advised to consult with an
+        independent financial advisor if you are unsure whether trading is right for you. Past performance is not
+        indicative of future results.
+        <a href="risk-disclosure.html" style="color: #0d397f; text-decoration: underline;">Read our full risk
+          disclosure</a>.
+      </p>
+
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">DAD Capitals</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p><strong>Address:</strong> Suite 502, 5th Floor,</p>
+
+            <p> Capital City Centre, Victoria, Mahé, Seychelles</p>
+            <br>
+
+            <p><strong>Email:</strong> <span>info@dadcapitals.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Primary Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About us</a></li>
+            <li><a href="introducing-broker.html">Introducing Broker (IB)</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="index.html#account-types">Account Types</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="trading-conditions.html#forex">Forex Trading</a></li>
+            <li><a href="trading-conditions.html#indices">CFD Trading</a></li>
+            <li><a href="trading-conditions.html#shares">Shares & ETFs</a></li>
+            <li><a href="standard.html">Standard Account</a></li>
+            <li><a href="pro.html">Pro Account</a></li>
+            <li><a href="premium.html">Premium Account</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Legal Terms</h4>
+          <ul>
+            <li><a href="trading-conditions.html">Trading Conditions</a></li>
+            <li><a href="client-agreement.html">Client Agreement</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="restricted-countries.html">Restricted Countries</a></li>
+            <li><a href="risk-disclosure.html">Risk Disclosure</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <strong>DAD Capitals</strong>. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/select2/js/select2.min.js"></script>
+
+  <script>
+    // Mobile nav toggle
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navMenu = document.getElementById('navmenu');
+
+    mobileNavToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('navbar-mobile');
+    });
+
+    // Dropdown toggle for mobile
+    document.querySelectorAll('.navmenu .dropdown > a').forEach(el => {
+      el.addEventListener('click', function (e) {
+        if (navMenu.classList.contains('navbar-mobile')) {
+          e.preventDefault();
+          this.nextElementSibling.classList.toggle('dropdown-active');
+        }
+      });
+    });
+
+    // Header scroll background change
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
