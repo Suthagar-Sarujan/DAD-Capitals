@@ -30,27 +30,120 @@
   <link href="assets/css/main.css" rel="stylesheet" />
 
   <style>
-    /* Custom styles for tabs */
-    .tabs {
-      margin-top: 2rem;
+    /* New Design Styles */
+    .trading-conditions-hero {
+      background: linear-gradient(135deg, #0d397f 0%, #1e88e5 100%);
+      color: white;
+      padding: 5rem 0;
+      text-align: center;
     }
-
-    .nav-tabs .nav-link {
-      cursor: pointer;
+    
+    .trading-conditions-hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
-
+    
+    .trading-conditions-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .condition-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      margin-bottom: 2rem;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .condition-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .condition-header {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .condition-header h3 {
+      color: #0d397f;
+      margin: 0;
+      font-size: 1.4rem;
+    }
+    
+    .condition-body {
+      padding: 1.5rem;
+    }
+    
+    .condition-body ul {
+      padding-left: 1.5rem;
+    }
+    
+    .condition-body li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-title h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0d397f;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+    }
+    
+    .section-title h2:after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background: #1e88e5;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .nav-pills .nav-link {
+      color: #333;
+      font-weight: 500;
+      border-radius: 5px;
+      margin: 0 5px 10px;
+      padding: 0.7rem 1.5rem;
+    }
+    
+    .nav-pills .nav-link.active {
+      background: #0d397f;
+      color: white;
+    }
+    
     .tab-content {
-      padding-top: 1.5rem;
+      padding-top: 2rem;
     }
-    @media (max-width: 767px) {
-  .pricing .pricing-item {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 320px; /* or 90%, or any width you want */
-    padding: 1rem 1.5rem; /* add some horizontal padding */
-  }
-}
-
+    
+    @media (max-width: 768px) {
+      .trading-conditions-hero {
+        padding: 3rem 0;
+      }
+      
+      .trading-conditions-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.6rem;
+      }
+    }
   </style>
 </head>
 
@@ -93,157 +186,202 @@
 
   <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade"
-      style="background-image: url(assets/img/trading-header.jpg);">
-      <div class="container position-relative">
+    <!-- Hero Section -->
+    <section class="trading-conditions-hero" data-aos="fade">
+      <div class="container">
         <h1>Trading Conditions</h1>
-        <p>At Dad Capitals, we believe in transparency and fairness. Browse detailed trading conditions below.</p>
+        <p>At Dad Capitals, we believe in transparency and fairness. Explore our comprehensive trading conditions designed to give you the best trading experience.</p>
       </div>
-    </div>
-    <!-- End Page Title -->
+    </section>
 
-    <!-- Tabs Section -->
-    <section id="trading-conditions-tabs" class="section" style="background-color: #f7f9fc; padding: 4rem 1rem;">
-      <div class="container" style="max-width: 900px;">
-        <h2 class="text-center fw-bold display-5 mb-4 text-dark">Trading Conditions</h2>
-
-        <ul class="nav nav-tabs" id="accountTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button"
-              role="tab" aria-controls="general" aria-selected="true">General Trading Conditions</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="forex-tab" data-bs-toggle="tab" data-bs-target="#forex" type="button" role="tab"
-              aria-controls="forex" aria-selected="false">Forex</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="indices-tab" data-bs-toggle="tab" data-bs-target="#indices" type="button"
-              role="tab" aria-controls="indices" aria-selected="false">Indices, Commodities & Crypto CFDs</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="shares-tab" data-bs-toggle="tab" data-bs-target="#shares" type="button"
-              role="tab" aria-controls="shares" aria-selected="false">Shares & ETF CFDs</button>
-          </li>
-        </ul>
-
-        <div class="tab-content" id="accountTabsContent" style="margin-top: 2rem; color: #333; font-size: 1rem;">
-          <!-- 1st Tab: General Trading Conditions -->
-          <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
-            <h3>Product Details</h3>
-            <p>We offer a variety of financial products including Forex, CFDs on indices, commodities, cryptocurrencies,
-              shares, and ETFs.<br />
-              Our products are designed to provide you with diverse opportunities for trading and investing.</p>
-
-            <ul>
-              <li>Access to 40+ currency pairs in Forex.</li>
-              <li>Indices CFDs tracking major global stock indices.</li>
-              <li>Commodities including precious metals and energy products.</li>
-              <li>Cryptocurrency CFDs covering top digital assets.</li>
-              <li>Shares and ETFs CFDs from major global markets.</li>
+    <!-- Trading Conditions Section -->
+    <section id="trading-conditions" class="section" style="padding: 5rem 0;">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Our Trading Conditions</h2>
+        </div>
+        
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <ul class="nav nav-pills justify-content-center mb-4" id="tradingTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="general-tab" data-bs-toggle="pill" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="true">General</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="forex-tab" data-bs-toggle="pill" data-bs-target="#forex" type="button" role="tab" aria-controls="forex" aria-selected="false">Forex</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="indices-tab" data-bs-toggle="pill" data-bs-target="#indices" type="button" role="tab" aria-controls="indices" aria-selected="false">Indices & Commodities</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="shares-tab" data-bs-toggle="pill" data-bs-target="#shares" type="button" role="tab" aria-controls="shares" aria-selected="false">Shares & ETFs</button>
+              </li>
             </ul>
-
-            <h3>Trading Hours</h3>
-            <p>Forex trading is available 24 hours a day from Monday to Friday, allowing you to trade at almost any time.<br />
-              Other products follow the official market hours of their respective exchanges, ensuring accurate pricing and liquidity.</p>
-            <ul>
-              <li>Forex: Sunday 22:00 GMT to Friday 22:00 GMT.</li>
-              <li>Indices & Commodities: Market-specific hours.</li>
-              <li>Cryptocurrencies: Generally 24/7 but subject to liquidity.</li>
-              <li>Shares & ETFs: Follow stock exchange trading hours.</li>
-            </ul>
-
-            <h3>Holidays & Orders</h3>
-            <ul>
-              <li>On public holidays, trading hours may vary or be closed for certain products.</li>
-              <li>We execute orders efficiently with no requotes under normal market conditions.</li>
-            </ul>
-            <ul>
-              <li>Holiday schedules published in advance.</li>
-              <li>Market orders, limit orders, stop orders supported.</li>
-              <li>Order execution speed optimized for low latency.</li>
-              <li>No requotes during normal market conditions.</li>
-            </ul>
-
-            <h3>Negative Balance Protection</h3>
-            <ul>
-              <li>Automatic balance reset to zero in extreme market events.</li>
-              <li>Ensures you cannot lose more than your deposited funds.</li>
-            </ul>
-
-            <h3>Bonus Terms & Conditions</h3>
-            <ul>
-              <li>Bonuses may have trading volume requirements.</li>
-              <li>Certain withdrawal restrictions apply while bonuses are active.</li>
-            </ul>
-
-            <h3>Margin Information</h3>
-            <ul>
-              <li>Forex leverage up to 1:30 for retail clients.</li>
-              <li>CFDs leverage varies by asset class.</li>
-              <li>Margin calls issued to maintain required equity levels.</li>
-            </ul>
-
-            <h3>Additional Trading Rules</h3>
-            <ul>
-              <li>No price manipulation or intervention.</li>
-              <li>Order priority based on time and price.</li>
-              <li>Slippage can occur during high volatility.</li>
-            </ul>
+            
+            <div class="tab-content" id="tradingTabsContent">
+              <!-- General Trading Conditions -->
+              <div class="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+                <div class="condition-card" data-aos="fade-up">
+                  <div class="condition-header">
+                    <h3>Product Details</h3>
+                  </div>
+                  <div class="condition-body">
+                    <p>We offer a variety of financial products including Forex, CFDs on indices, commodities, cryptocurrencies, shares, and ETFs. Our products are designed to provide you with diverse opportunities for trading and investing.</p>
+                    <ul>
+                      <li>Access to 40+ currency pairs in Forex.</li>
+                      <li>Indices CFDs tracking major global stock indices.</li>
+                      <li>Commodities including precious metals and energy products.</li>
+                      <li>Cryptocurrency CFDs covering top digital assets.</li>
+                      <li>Shares and ETFs CFDs from major global markets.</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="condition-card" data-aos="fade-up">
+                  <div class="condition-header">
+                    <h3>Trading Hours</h3>
+                  </div>
+                  <div class="condition-body">
+                    <p>Forex trading is available 24 hours a day from Monday to Friday, allowing you to trade at almost any time. Other products follow the official market hours of their respective exchanges, ensuring accurate pricing and liquidity.</p>
+                    <ul>
+                      <li>Forex: Sunday 22:00 GMT to Friday 22:00 GMT.</li>
+                      <li>Indices & Commodities: Market-specific hours.</li>
+                      <li>Cryptocurrencies: Generally 24/7 but subject to liquidity.</li>
+                      <li>Shares & ETFs: Follow stock exchange trading hours.</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="condition-card" data-aos="fade-up">
+                  <div class="condition-header">
+                    <h3>Holidays & Orders</h3>
+                  </div>
+                  <div class="condition-body">
+                    <ul>
+                      <li>On public holidays, trading hours may vary or be closed for certain products.</li>
+                      <li>We execute orders efficiently with no requotes under normal market conditions.</li>
+                      <li>Holiday schedules published in advance.</li>
+                      <li>Market orders, limit orders, stop orders supported.</li>
+                      <li>Order execution speed optimized for low latency.</li>
+                      <li>No requotes during normal market conditions.</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="condition-card" data-aos="fade-up">
+                  <div class="condition-header">
+                    <h3>Risk Management</h3>
+                  </div>
+                  <div class="condition-body">
+                    <ul>
+                      <li>Negative Balance Protection: Automatic balance reset to zero in extreme market events.</li>
+                      <li>Margin calls issued to maintain required equity levels.</li>
+                      <li>Forex leverage up to 1:30 for retail clients.</li>
+                      <li>CFDs leverage varies by asset class.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Forex Conditions -->
+              <div class="tab-pane fade" id="forex" role="tabpanel" aria-labelledby="forex-tab">
+                <div class="condition-card" data-aos="fade-up">
+                  <div class="condition-header">
+                    <h3>Forex Trading Conditions</h3>
+                  </div>
+                  <div class="condition-body">
+                    <h4>Overnight Financing</h4>
+                    <p>Forex positions held overnight incur swap fees based on the interest rate differential between the currencies involved. Financing rates are updated daily and disclosed transparently.</p>
+                    <ul>
+                      <li>Swap rates depend on currency pairs and market conditions.</li>
+                      <li>Positive or negative swap can apply.</li>
+                      <li>Swap rollover time at 24:00 GMT daily.</li>
+                      <li>Clients can check current swap rates in the platform.</li>
+                    </ul>
+                    
+                    <h4>Execution & Spreads</h4>
+                    <ul>
+                      <li>Variable spreads starting from 0.1 pips on major pairs.</li>
+                      <li>No commission on standard accounts.</li>
+                      <li>Instant execution with no dealing desk intervention.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Indices & Commodities Conditions -->
+              <div class="tab-pane fade" id="indices" role="tabpanel" aria-labelledby="indices-tab">
+                <div class="condition-card" data-aos="fade-up">
+                  <div class="condition-header">
+                    <h3>Indices, Commodities & Crypto CFDs</h3>
+                  </div>
+                  <div class="condition-body">
+                    <h4>Overnight Financing</h4>
+                    <p>CFDs on indices, commodities, and cryptocurrencies are subject to overnight financing fees. These fees compensate for the cost of holding positions past trading hours.</p>
+                    <ul>
+                      <li>Financing charges depend on the underlying asset.</li>
+                      <li>Fees applied at rollover times specified per contract.</li>
+                      <li>Details available on product specification pages.</li>
+                    </ul>
+                    
+                    <h4>Contracts' Rollover Dates</h4>
+                    <ul>
+                      <li>Rollover typically monthly or quarterly depending on the asset.</li>
+                      <li>Clients notified ahead of rollover dates.</li>
+                      <li>Positions automatically transferred to new contracts.</li>
+                    </ul>
+                    
+                    <h4>Leverage & Margins</h4>
+                    <ul>
+                      <li>Indices CFDs leverage up to 1:20</li>
+                      <li>Commodities CFDs leverage up to 1:10</li>
+                      <li>Crypto CFDs leverage up to 1:2</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Shares & ETFs Conditions -->
+              <div class="tab-pane fade" id="shares" role="tabpanel" aria-labelledby="shares-tab">
+                <div class="condition-card" data-aos="fade-up">
+                  <div class="condition-header">
+                    <h3>Shares & ETF CFDs</h3>
+                  </div>
+                  <div class="condition-body">
+                    <h4>Overnight Financing</h4>
+                    <p>Overnight fees apply for CFDs on shares and ETFs held past trading hours. These reflect the borrowing costs of the underlying shares.</p>
+                    <ul>
+                      <li>Financing rates updated regularly.</li>
+                      <li>Fees depend on the specific share or ETF.</li>
+                      <li>Transparent disclosure provided on platform.</li>
+                    </ul>
+                    
+                    <h4>Dividends</h4>
+                    <p>Dividends are credited to long positions and debited from short positions. This reflects the economic benefit or cost of holding shares through dividend dates.</p>
+                    <ul>
+                      <li>Dividend adjustments calculated based on official announcements.</li>
+                      <li>Details shown on account statements and platform.</li>
+                    </ul>
+                    
+                    <h4>Corporate Actions</h4>
+                    <ul>
+                      <li>Stock splits, mergers and other corporate actions handled according to exchange rules.</li>
+                      <li>Clients notified of any adjustments to positions.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- 2nd Tab: Forex -->
-          <div class="tab-pane fade" id="forex" role="tabpanel" aria-labelledby="forex-tab">
-            <h3>Overnight Financing</h3>
-            <p>Forex positions held overnight incur swap fees based on the interest rate differential between the currencies
-              involved.<br />
-              Financing rates are updated daily and disclosed transparently.</p>
-            <ul>
-              <li>Swap rates depend on currency pairs and market conditions.</li>
-              <li>Positive or negative swap can apply.</li>
-              <li>Swap rollover time at 24:00 GMT daily.</li>
-              <li>Clients can check current swap rates in the platform.</li>
-            </ul>
-          </div>
-
-          <!-- 3rd Tab: Indices, Commodities & Crypto CFDs -->
-          <div class="tab-pane fade" id="indices" role="tabpanel" aria-labelledby="indices-tab">
-            <h3>Overnight Financing</h3>
-            <p>CFDs on indices, commodities, and cryptocurrencies are subject to overnight financing fees.<br />
-              These fees compensate for the cost of holding positions past trading hours.</p>
-            <ul>
-              <li>Financing charges depend on the underlying asset.</li>
-              <li>Fees applied at rollover times specified per contract.</li>
-              <li>Details available on product specification pages.</li>
-            </ul>
-
-            <h3>Contracts' Rollover Dates</h3>
-            <ul>
-              <li>Rollover typically monthly or quarterly depending on the asset.</li>
-              <li>Clients notified ahead of rollover dates.</li>
-              <li>Positions automatically transferred to new contracts.</li>
-            </ul>
-          </div>
-
-          <!-- 4th Tab: Shares & ETF CFDs -->
-          <div class="tab-pane fade" id="shares" role="tabpanel" aria-labelledby="shares-tab">
-            <h3>Overnight Financing</h3>
-            <p>Overnight fees apply for CFDs on shares and ETFs held past trading hours.<br />
-              These reflect the borrowing costs of the underlying shares.</p>
-            <ul>
-              <li>Financing rates updated regularly.</li>
-              <li>Fees depend on the specific share or ETF.</li>
-              <li>Transparent disclosure provided on platform.</li>
-            </ul>
-
-            <h3>Dividends</h3>
-            <p>Dividends are credited to long positions and debited from short positions.<br />
-              This reflects the economic benefit or cost of holding shares through dividend dates.</p>
-            <ul>
-              <li>Dividend adjustments calculated based on official announcements.</li>
-              <li>Details shown on account statements and platform.</li>
-            </ul>
-          </div>
+    <!-- Risk Warning Section -->
+    <section class="bg-light py-4">
+      <div class="container">
+        <div class="alert alert-warning" role="alert">
+          <strong>Risk Warning:</strong> Trading leveraged products such as Forex and CFDs carries a high level of risk and may not be suitable for all investors. You could lose more than your initial deposit. Please ensure you fully understand the risks involved and seek independent advice if necessary.
         </div>
       </div>
     </section>
@@ -366,7 +504,7 @@
     }
 
     // Update URL hash when a tab is clicked
-    const tabButtons = document.querySelectorAll('#accountTabs button[data-bs-toggle="tab"]');
+    const tabButtons = document.querySelectorAll('#tradingTabs button[data-bs-toggle="pill"]');
     tabButtons.forEach(button => {
       button.addEventListener('shown.bs.tab', function (event) {
         history.replaceState(null, null, event.target.getAttribute('data-bs-target'));

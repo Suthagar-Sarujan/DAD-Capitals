@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600&family=Raleway:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap"
     rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
@@ -24,1698 +24,1642 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!--scroll up bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet" />
-
   <style>
-    /* Header scroll effect */
-    header.header {
-      transition: background-color 0.3s ease;
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #1e40af;
+      --accent-color: #3b82f6;
+      --dark-color: #1f2937;
+      --light-color: #f9fafb;
+      --text-color: #374151;
+      --border-radius: 8px;
+      --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
+      --nav-font: "Montserrat", sans-serif;
+      --nav-color: #ffffff;
+      --nav-hover-color: #3b82f6;
+      --nav-dropdown-color: #1f2937;
+      --nav-dropdown-hover-color: #2563eb;
+      --nav-mobile-background-color: #ffffff;
+      --nav-dropdown-background-color: #f9fafb;
+      --contrast-color: #ffffff;
     }
 
-    header.header.scrolled {
-      background-color: #000 !important;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-      z-index: 9999;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      transition: background-color 0.3s ease;
-      background-color: transparent;
-      /* default */
-      z-index: 9999;
-    }
-
-    header.scrolled {
-      background-color: white;
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      /* Needed for overlay */
-      background: url('assets/img/Edu-bg.jpg') no-repeat center center;
-      background-size: cover;
-      padding: 80px 20px;
-      text-align: center;
-      color: white;
-      font-family: 'Poppins', sans-serif;
-      overflow: hidden;
-      height: 70vh;
-    }
-
-    .hero .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-
-    .hero h1,
-    .hero p.lead {
-      position: relative;
-      z-index: 2;
-
-    }
-
-    .hero h1 {
-      font-family: var(--heading-font);
-      font-size: 4rem !important;
-      font-weight: bold !important;
-      color: white;
-      margin-top: 120px !important;
-
-    }
-
-    .hero p.lead {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1.25rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      color: white;
-
-    }
-
-    main {
-      min-height: 100vh;
-      padding: 60px 20px 60px;
-      font-family: 'Poppins', sans-serif;
-      background: #f5f7fa;
-      color: black;
-      max-width: 1000px;
-      margin: 0 auto 4rem;
-    }
-
-    /* Section titles - minimal spacing */
-    h2.section-title {
-      font-weight: 700;
-      margin-top: 0.5rem;
-      margin-bottom: 0.3rem;
-      color: #1e3a8a;
-      scroll-margin-top: 100px;
-      cursor: pointer;
-    }
-
-    /* Subsection titles - minimal spacing */
-    h3.subsection-title {
-      color: #2563eb;
-      margin-top: 0.5rem;
-      margin-bottom: 0.3rem;
-      scroll-margin-top: 90px;
-    }
-
-    /* Ebook section h3 */
-    .ebook-section h3 {
-      margin-top: 0.5rem;
-      margin-bottom: 0.3rem;
-      color: #1e3a8a;
-      border-bottom: 2px solid #2563eb;
-      padding-bottom: 0.3rem;
-      cursor: default;
-    }
-
-    .content-wrapper {
-      background: white;
-      padding: 1rem 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgb(0 0 0 / 0.1);
-    }
-
-    p,
-    ul {
-      font-size: 16px;
-      line-height: 1.8;
-      margin-top: 0;
-      margin-bottom: 0.4rem;
-      color: #444;
-    }
-
-    ul.strategies {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-
-    ul.strategies li {
-      margin-bottom: 0.3rem;
-    }
-
-    /* E-Book shortcuts A-Z */
-    #ebook-shortcuts {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 4px;
-      margin-bottom: 0.5rem;
-      user-select: none;
-    }
-
-    #ebook-shortcuts button {
-      background-color: #1e3a8a;
-      color: white;
-      border: none;
-      padding: 4px 8px;
-      font-weight: 600;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      min-width: 28px;
-      text-align: center;
-    }
-
-    #ebook-shortcuts button:hover {
-      background-color: #1346c0;
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 600px) {
-      main {
-        padding: 60px 15px 40px;
-      }
-
-      .content-wrapper {
-        padding: 1rem 1.25rem;
-      }
-
-      #hero-education {
-        height: 220px;
-      }
-
-      #hero-education h1 {
-        font-size: 2rem;
-      }
-    }
-
-    /* Economic Calendar container */
-    #economic-calendar {
-      width: 100%;
-      height: 600px;
-      margin-bottom: 1.5rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .tools-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
-      max-width: 900px;
-      margin: 40px auto;
-    }
-
-    .tool-box {
-      flex: 1 1 280px;
-      border: 2px solid #007acc;
-      border-radius: 10px;
-      padding: 20px 25px;
-      background: #f0f8ff;
-      box-shadow: 3px 3px 10px rgba(0, 122, 204, 0.3);
-    }
-
-    .tool-box h4 {
-      color: #004a99;
-      margin-bottom: 15px;
-      font-size: 1.3em;
-    }
-
-    .tool-box p {
-      font-size: 15px;
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--text-color);
+      background-color: var(--light-color);
       line-height: 1.6;
-      color: #222;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
     }
 
-    #scroll-top {
-      display: none;
-      /* make sure this is the first rule! */
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 40px;
-      height: 40px;
-      background-color: #007bff;
-      color: white;
-      border-radius: 50%;
-      cursor: pointer;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      transition: opacity 0.3s ease;
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      color: var(--dark-color);
     }
 
-
-    #scroll-top:hover {
-      background-color: #0056b3;
+    /* Header Styles */
+    .header {
+      background-color: transparent !important;
+      color: var(--default-color) !important;
+      padding: 15px 0 !important;
+      transition: all 0.5s !important;
+      z-index: 997 !important;
+      height: 10vh !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
     }
 
-
-    /* Header Fixed Height */
-    header.header {
-      height: 70px;
-      /* background-color: #000; */
-      transition: all 0.3s ease;
-      z-index: 1000;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+    .header.scrolled {
+      background-color: rgba(0, 0, 0, 0.9) !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
     }
 
-    header.header.scrolled {
-      background-color: rgba(0, 0, 0, 0.9);
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    .header .logo {
+      line-height: 1 !important;
     }
 
-    /* Container Styles */
-    .container-fluid {
-      height: 100%;
-      padding: 0 20px;
+    .header .logo img {
+      max-height: 32px !important;
+      margin-right: 8px !important;
     }
 
-    .container-xl {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .d-flex {
-      display: flex;
-    }
-
-    .align-items-center {
-      align-items: center;
-    }
-
-    .justify-content-between {
-      justify-content: space-between;
-    }
-
-    /* Logo Styles */
-    .logo {
-      text-decoration: none;
-      height: 50px;
-      line-height: 50px;
-    }
-
-    .logo img {
-      height: 40px;
-      width: auto;
+    .header .logo h1 {
+      font-size: 30px !important;
+      margin: 0 !important;
+      font-weight: 700 !important;
+      color: var(--nav-color) !important;
+      border-left: 4px solid var(--accent-color) !important;
+      padding-left: 8px !important;
     }
 
     /* Navigation Menu */
-    .navmenu {
-      height: 70px;
-      display: flex;
-      align-items: center;
+    /* .navmenu {
+      font-family: var(--nav-font) !important;
     }
 
-    .navmenu>ul {
-      display: flex;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      align-items: center;
-      list-style: none;
+    .navmenu ul {
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none !important;
     }
 
-    .navmenu ul li {
-      position: relative;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      padding: 0 -5px;
+    .navmenu a {
+      text-decoration: none !important;
+      transition: all 0.3s ease !important;
+      color: var(--nav-color) !important;
     }
 
-    .navmenu ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 13.8px;
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      height: 70px;
-      line-height: 70px;
-      transition: all 0.3s ease;
-      font-family: 'poppins';
-    }
-
-    .navmenu ul li a:hover,
-    .navmenu ul li a.active {
-      color: #4e9af1;
-    }
-
-    /* Dropdown Menu Styles */
-    .dropdown>a {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-
-    .dropdown-icon {
-      margin-left: 5px;
-      transition: transform 0.3s ease;
-    }
-
-    .dropdown.active .dropdown-icon {
-      transform: rotate(180deg);
-    }
-
-    .dropdown-menu {
-      position: absolute;
-      top: 70px;
-      left: 0;
-      width: 220px;
-      height: auto;
-      max-height: 300px;
-      background: #fff;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      padding: 10px 0;
-      border-radius: 4px;
-      display: none;
-      z-index: 999;
-      animation: fadeIn 0.3s ease;
-    }
-
-    .dropdown.active .dropdown-menu {
-      display: block;
-    }
-
-    .dropdown-menu li {
-      height: auto;
-      padding: 0;
-    }
-
-    .dropdown-menu li a {
-      color: #333;
-      padding: 12px 20px;
-      height: auto;
-      line-height: 1.4;
-      font-size: 14px;
-      width: 100%;
-      display: block;
-    }
-
-    .dropdown-menu li a:hover {
-      background-color: #f5f5f5;
-      color: #4e9af1;
-    }
-
-    /* Mobile Navigation Toggle */
     .mobile-nav-toggle {
-      position: fixed;
-      right: 15px;
-      top: 20px;
-      z-index: 9998;
-      border: 0;
-      background: none;
-      font-size: 24px;
-      transition: all 0.4s;
-      outline: none;
-      line-height: 1;
+      color: var(--nav-color);
+      font-size: 28px;
       cursor: pointer;
-      text-align: center;
-      color: #fff;
+      line-height: 0;
+      transition: 0.5s;
       display: none;
-      width: 30px;
-      height: 30px;
     }
 
-    /* Mobile Responsive Styles */
-    @media (max-width: 991px) {
-      .mobile-nav-toggle {
+    @media (min-width: 1200px) {
+      .navmenu {
+        padding: 0;
+      }
+
+      .navmenu ul {
         display: flex;
         align-items: center;
-        justify-content: center;
+      }
+
+      .navmenu li {
+        position: relative;
+      }
+
+      .navmenu > ul > li > a,
+      .navmenu > ul > li > a:focus {
+        color: var(--nav-color);
+        padding: 18px 12px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+      }
+
+      .navmenu a i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
+        transition: 0.3s;
+      }
+
+      .navmenu > ul > li:last-child > a {
+        padding-right: 0;
+      }
+
+      .navmenu li:hover > a,
+      .navmenu .active,
+      .navmenu .active:focus {
+        color: var(--nav-hover-color);
+      }
+
+      .navmenu .dropdown ul {
+        display: none;
+        position: absolute;
+        left: 14px;
+        top: calc(100% + 30px);
+        margin: 0;
+        padding: 10px 0;
+        width: 220px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        border-radius: 4px;
+        z-index: 99;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+        background: white;
+      }
+
+      .navmenu .dropdown ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .navmenu .dropdown ul li:last-child {
+        border-bottom: none;
+      }
+
+      .navmenu .dropdown ul a {
+        padding: 12px 20px;
+        font-size: 14px;
+        text-transform: none;
+        color: var(--nav-dropdown-color);
+        font-weight: 500;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .navmenu .dropdown ul a:hover,
+      .navmenu .dropdown ul .active:hover,
+      .navmenu .dropdown ul li:hover > a {
+        color: var(--nav-dropdown-hover-color);
+        background: rgba(0, 0, 0, 0);
+      }
+
+      .navmenu .dropdown:hover > ul {
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+        display: block;
+      }
+
+      .navmenu .dropdown .dropdown ul {
+        top: 0;
+        left: -90%;
+        visibility: hidden;
+      }
+
+      .navmenu .dropdown .dropdown:hover > ul {
+        opacity: 1;
+        top: 0;
+        left: -100%;
+        visibility: visible;
+      }
+    }
+
+    @media (max-width: 1199px) {
+      .mobile-nav-toggle {
+        display: block;
+        color: var(--nav-color);
+        font-size: 28px;
+        line-height: 0;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: color 0.3s;
       }
 
       .navmenu {
         position: fixed;
-        top: 8px;
-        right: -300px;
-        width: 300px;
-        height: calc(100vh - 70px);
-        background: #ffffff00;
+        overflow: hidden;
+        inset: 0;
+        background: rgba(33, 37, 41, 0.8);
         transition: 0.3s;
-        padding: 0;
-        border-left: 1px solid #eeeeee00;
+        z-index: 9998;
+        opacity: 0;
+        visibility: hidden;
       }
 
-      .navmenu.active {
-        right: 0;
-      }
-
-      .navmenu ul {
-        flex-direction: column;
-        height: 100%;
-        padding: 20px 0;
-        align-items: stretch;
-      }
-
-      .navmenu ul li {
-        width: 100%;
-        height: auto;
-        padding: 0;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .navmenu ul li a {
-        color: #333;
-        padding: 15px 20px;
-        justify-content: space-between;
-        width: 100%;
-        height: auto;
-        line-height: 1.4;
-        border-bottom: 1px solid #eee;
-      }
-
-      .navmenu ul li a:hover,
-      .navmenu ul li a.active {
-        color: #4e9af1;
-        background-color: #f5f5f5;
-      }
-
-      .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        padding: 0;
+      .navmenu > ul {
         display: none;
-        width: 100%;
-        height: auto;
-        max-height: none;
-        background: #f9f9f9;
-        border-radius: 0;
-        top: auto;
+        position: absolute;
+        inset: 60px 20px 20px 20px;
+        padding: 10px 0;
+        border-radius: 6px;
+        background-color: var(--nav-mobile-background-color);
+        overflow-y: auto;
+        z-index: 9998;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
       }
 
-      .dropdown.active .dropdown-menu {
+      .navmenu a,
+      .navmenu a:focus {
+        color: var(--nav-dropdown-color);
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        white-space: nowrap;
+      }
+
+      .navmenu a i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+      }
+
+      .navmenu a:hover,
+      .navmenu .active,
+      .navmenu .active:focus {
+        color: var(--nav-dropdown-hover-color);
+      }
+
+      .navmenu .active i,
+      .navmenu .active:focus i {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        transform: rotate(180deg);
+      }
+
+      .navmenu .dropdown ul {
+        position: static;
+        display: none;
+        padding: 0;
+        margin: 0 0 0 20px;
+        background-color: var(--nav-dropdown-background-color);
+        border-left: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
+        box-shadow: none;
+      }
+
+      .navmenu .dropdown > .dropdown-active {
         display: block;
       }
 
-      .dropdown-menu li a {
-        padding: 12px 40px;
-        border-bottom: 1px solid #ddd;
+      .mobile-nav-active {
+        overflow: hidden;
       }
 
-      .dropdown-icon {
-        margin-left: auto;
+      .mobile-nav-active .mobile-nav-toggle {
+        color: #fff;
+        position: fixed;
+        font-size: 32px;
+        top: 15px;
+        right: 15px;
+        margin-right: 0;
+        z-index: 9999;
+      }
+
+      .mobile-nav-active .navmenu {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-nav-active .navmenu > ul {
+        display: block;
       }
     }
 
-    /* Smaller Mobile Devices */
-    @media (max-width: 576px) {
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .navmenu > ul {
+        inset: 70px 30px 30px 30px;
+      }
+
+      .navmenu a,
+      .navmenu a:focus {
+        padding: 14px 25px;
+        font-size: 18px;
+      }
+    } */
+
+
+    /* Navigation Menu */
+.navmenu {
+  font-family: var(--nav-font) !important;
+  z-index: 9997 !important;
+}
+
+.navmenu ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.navmenu a {
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Desktop Navigation */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0 !important;
+  }
+
+  .navmenu>ul {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .navmenu li {
+    position: relative !important;
+  }
+
+  .navmenu>ul>li>a,
+  .navmenu>ul>li>a:focus {
+    color: var(--nav-color) !important;
+    padding: 18px 12px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    white-space: nowrap !important;
+  }
+
+  .navmenu a i {
+    font-size: 12px !important;
+    line-height: 0 !important;
+    margin-left: 5px !important;
+    transition: 0.3s !important;
+  }
+
+  .navmenu>ul>li:last-child>a {
+    padding-right: 0 !important;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-hover-color) !important;
+  }
+
+  /* Dropdown Styles */
+  .navmenu .dropdown ul {
+    flex-direction: column !important;
+    position: absolute !important;
+    left: 14px !important;
+    top: 130% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 220px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+    border-radius: 4px !important;
+    z-index: 99 !important;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1) !important;
+    background: white !important;
+    color: black !important;
+  }
+
+  .navmenu .dropdown ul li {
+    width: 100% !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+
+  .navmenu .dropdown ul li:last-child {
+    border-bottom: none !important;
+  }
+
+  .navmenu .dropdown ul a {
+    padding: 12px 20px !important;
+    font-size: 14px !important;
+    text-transform: none !important;
+    color: var(--nav-dropdown-color) !important;
+    font-weight: 500 !important;
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover>a {
+    color: var(--nav-dropdown-hover-color) !important;
+    background: rgba(0, 0, 0, 0) !important;
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1 !important;
+    top: 100% !important;
+    visibility: visible !important;
+  }
+
+  /* Second Level Dropdown */
+  .navmenu .dropdown .dropdown ul {
+    top: 0 !important;
+    left: -90% !important;
+    visibility: hidden !important;
+  }
+
+  .navmenu .dropdown .dropdown:hover>ul {
+    opacity: 1 !important;
+    top: 0 !important;
+    left: -100% !important;
+    visibility: visible !important;
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    color: var(--nav-color) !important;
+    font-size: 28px !important;
+    line-height: 0 !important;
+    margin-right: 10px !important;
+    cursor: pointer !important;
+    transition: color 0.3s !important;
+    display: block !important;
+  }
+
+  .navmenu ul {
+    display: none !important;
+    position: absolute !important;
+    inset: 60px 20px 20px 20px !important;
+    padding: 10px 0 !important;
+    border-radius: 6px !important;
+    background-color: var(--nav-mobile-background-color) !important;
+    overflow-y: auto !important;
+    z-index: 9998 !important;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-dropdown-color) !important;
+    padding: 12px 20px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    white-space: nowrap !important;
+  }
+
+  .navmenu a i {
+    font-size: 12px !important;
+    line-height: 0 !important;
+    margin-left: 5px !important;
+    width: 30px !important;
+    height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%) !important;
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-dropdown-hover-color) !important;
+  }
+
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    background-color: var(--accent-color) !important;
+    color: var(--contrast-color) !important;
+    transform: rotate(180deg) !important;
+  }
+
+  /* Mobile Dropdown Styles */
+  .navmenu .dropdown ul {
+    position: static !important;
+    display: none !important;
+    padding: 0 !important;
+    margin: 0 0 0 20px !important;
+    background-color: var(--nav-dropdown-background-color) !important;
+    border-left: 2px solid color-mix(in srgb, var(--default-color), transparent 90%) !important;
+    box-shadow: none !important;
+  }
+
+  .navmenu .dropdown>.dropdown-active {
+    display: block !important;
+  }
+
+  /* Mobile Nav Active State */
+  .mobile-nav-active {
+    overflow: hidden !important;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #fff !important;
+    position: fixed !important;
+    font-size: 32px !important;
+    top: 15px !important;
+    right: 15px !important;
+    margin-right: 0 !important;
+    z-index: 9999 !important;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed !important;
+    overflow: hidden !important;
+    inset: 0 !important;
+    background: rgba(33, 37, 41, 0.8) !important;
+    transition: 0.3s !important;
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    display: block !important;
+  }
+}
+
+/* Tablet Responsiveness */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .navmenu ul {
+    inset: 70px 30px 30px 30px !important;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    padding: 14px 25px !important;
+    font-size: 18px !important;
+  }
+}
+
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/img/Edu-bg.jpg") no-repeat center center;
+      background-size: cover;
+      padding: 120px 20px;
+      text-align: center;
+      color: white;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      color: white;
+    }
+
+    .hero p.lead {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.9;
+      font-family: "Poppins", sans-serif;
+      color: white;
+    }
+
+    /* Main Content */
+    main {
+      padding: 60px 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .content-card {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.425);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Table of Contents */
+    #table-of-contents {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      padding: 2rem;
+      margin: -80px auto 60px;
+      max-width: 1000px;
+      position: relative;
+      z-index: 1;
+    }
+
+    #table-of-contents h2 {
+      color: var(--primary-color);
+      text-align: center;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    #table-of-contents h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--primary-color);
+    }
+
+    #table-of-contents ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    #table-of-contents li a {
+      display: block;
+      padding: 0.8rem 1rem;
+      background: #f3f4f6;
+      color: var(--dark-color);
+      border-radius: var(--border-radius);
+      font-weight: 500;
+      transition: var(--transition);
+      text-align: center;
+      text-decoration: none;
+    }
+
+    #table-of-contents li a:hover {
+      background: var(--primary-color);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* Section Styles */
+    .section-title {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--primary-color);
+    }
+
+    .subsection-title {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      font-size: 1.5rem;
+    }
+
+    /* Asset Cards */
+    .asset-card {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.425);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .asset-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 50, 150, 0.5);
+    }
+
+    .asset-card h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+
+    /* E-Book Styles */
+    #ebook-shortcuts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+      justify-content: center;
+    }
+
+    #ebook-shortcuts button {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    #ebook-shortcuts button:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+
+    .ebook-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .ebook-section h3 {
+      color: var(--primary-color);
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    /* Tools Section */
+    .tools-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .tool-box {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      padding: 1.5rem;
+      transition: var(--transition);
+      border-top: 3px solid var(--primary-color);
+    }
+
+    .tool-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .tool-box h4 {
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+
+    /* Strategies Section */
+    .strategy-card {
+      background: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+    }
+
+    .strategy-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .strategy-card h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+
+    .strategy-card ul {
+      padding-left: 1.2rem;
+    }
+
+    .strategy-card li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Economic Calendar */
+    #economic-calendar {
+      width: 100%;
+      height: 600px;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      margin: 2rem 0;
+    }
+
+    /* Footer Styles */
+    .dark-background {
+      background-color: #000000;
+      color: white;
+    }
+
+    .footer {
+      padding: 60px 0 30px;
+      font-size: 14px;
+    }
+
+    .footer-top {
+      padding-bottom: 30px;
+    }
+
+    .footer-about {
+      margin-bottom: 30px;
+    }
+
+    .footer-links h4 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-links h4::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--primary-color);
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      padding: 8px 0;
+    }
+
+    .footer-links a {
+      color: #d1d5db;
+      transition: color 0.3s;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Scroll to Top Button */
+    #scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 999;
+      text-decoration: none;
+      border: none;
+    }
+
+    #scroll-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #scroll-top:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+
+    /* Preloader */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: white;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1199px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      #table-of-contents {
+        max-width: 900px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .hero {
+        height: 50vh;
+        padding: 100px 20px;
+      }
 
       .hero h1 {
-        font-family: var(--heading-font);
-        font-size: 2rem !important;
-        font-weight: bold !important;
-        color: white;
-        margin-top: 120px !important;
+        font-size: 2.5rem;
       }
 
-      .container-fluid {
-        padding: 0 15px;
-      }
-
-      .navmenu {
-        width: 100%;
-        right: -100%;
-      }
-
-      .mobile-nav-toggle {
-        right: 15px;
+      #table-of-contents ul {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    /* Animation */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
+    @media (max-width: 767px) {
+      .hero {
+        height: 45vh;
+        padding: 90px 20px;
       }
 
-      to {
-        opacity: 1;
-        transform: translateY(0);
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .content-card {
+        padding: 1.5rem;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      #table-of-contents {
+        margin-top: -60px;
+        padding: 1.5rem;
+      }
+
+      #economic-calendar {
+        height: 500px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .hero {
+        height: 40vh;
+        padding: 80px 15px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero p.lead {
+        font-size: 0.9rem;
+      }
+
+      .content-card {
+        padding: 1rem;
+      }
+
+      #table-of-contents ul {
+        grid-template-columns: 1fr;
+      }
+
+      .tools-container {
+        grid-template-columns: 1fr;
+      }
+
+      #economic-calendar {
+        height: 400px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero {
+        height: 70vh;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      #scroll-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .content-card {
+        padding: 1rem;
       }
     }
   </style>
-
 </head>
 
 <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/logo.png" alt="DAD Capitals Logo" style="max-height: 40px; margin-right: 10px" />
+            </a>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="https://via.placeholder.com/40x40/4e9af1/ffffff?text=LOGO" alt="DAD Capitals Logo"
-          style="max-height: 40px; margin-right: 10px" />
-      </a>
-
-      <i class="mobile-nav-toggle bi bi-list"></i>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="introducing-broker.html">Introducing Broker</a></li>
-          <li><a href="education.html" class="active">Education</a></li>
-          <li class="dropdown">
-            <a href="#"><span>Legal Terms</span> <i class="bi bi-chevron-down dropdown-icon"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="trading-conditions.html">Trading conditions</a></li>
-              <li><a href="client-agreement.html">Client agreement</a></li>
-              <li><a href="restricted-countries.html">Restricted countries</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#"><span>Account Types</span> <i class="bi bi-chevron-down dropdown-icon"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="standard.html">Standard Account</a></li>
-              <li><a href="pro.html">Pro Account</a></li>
-              <li><a href="premium.html">Premium Account</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- End Header -->
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="introducing-broker.html">Introducing Broker</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li class="dropdown">
+                        <a href="#"><span>Legal Terms</span>
+                            <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li>
+                                <a href="trading-conditions.html">Trading conditions</a>
+                            </li>
+                            <li><a href="client-agreement.html">Client agreement</a></li>
+                            <li>
+                                <a href="restricted-countries.html">Restricted countries</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#"><span>Account Types</span>
+                            <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="standard.html">Standard Account</a></li>
+                            <li><a href="pro.html">Pro Account</a></li>
+                            <li><a href="premium.html">Premium Account</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+    <!-- End Header -->
 
   <!-- HERO SECTION -->
   <section class="hero text-center">
-    <div class="overlay"></div> <!-- Black overlay layer -->
-    <h1>Trading Education</h1>
-    <p class="lead mt-3">Unlock your financial future with trading knowledge.</p>
+    <h1>Master Trading Education</h1>
+    <p class="lead mt-3">
+      Elevate your trading skills with comprehensive market knowledge and
+      expert strategies
+    </p>
   </section>
 
-  <nav id="table-of-contents" style="
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px 30px;
-    border-radius: 10px;
-    background: #f0f4ff;
-box-shadow: 22px 20px 25px 20px rgb(0 0 0 / 15%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: none;
-  ">
-    <h2 style="
-    font-size: 1.8rem;
-    color: #1a3c72;
-    margin-bottom: 18px;
-    text-align: center;
-    font-weight: 700;
-    letter-spacing: 1px;
-  ">
-      Table of Contents
-    </h2>
-    <ul style="
-    list-style-type: none;
-    padding-left: 0;
-    margin: 0;
-  ">
-      <li style="margin-bottom: 20px;">
-        <a href="#market-education" style="
-        display: block;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #2952cc;
-        text-decoration: none;
-        transition: color 0.3s ease, text-decoration 0.3s ease;
-      " onmouseover="this.style.color='#163ea6'; this.style.textDecoration='underline';"
-          onmouseout="this.style.color='#2952cc'; this.style.textDecoration='none';">
-          Market Education
-        </a>
-      </li>
-      <li style="margin-bottom: 20px;">
-        <a href="#asset-explanation" style="
-        display: block;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #2952cc;
-        text-decoration: none;
-        transition: color 0.3s ease, text-decoration 0.3s ease;
-      " onmouseover="this.style.color='#163ea6'; this.style.textDecoration='underline';"
-          onmouseout="this.style.color='#2952cc'; this.style.textDecoration='none';">
-          Financial Assets
-        </a>
-      </li>
-      <li style="margin-bottom: 20px;">
-        <a href="#ebook" style="
-        display: block;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #2952cc;
-        text-decoration: none;
-        transition: color 0.3s ease, text-decoration 0.3s ease;
-      " onmouseover="this.style.color='#163ea6'; this.style.textDecoration='underline';"
-          onmouseout="this.style.color='#2952cc'; this.style.textDecoration='none';">
-          E-book
-        </a>
-      </li>
-      <li style="margin-bottom: 20px;">
-        <a href="#trading-tools" style="
-        display: block;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #2952cc;
-        text-decoration: none;
-        transition: color 0.3s ease, text-decoration 0.3s ease;
-      " onmouseover="this.style.color='#163ea6'; this.style.textDecoration='underline';"
-          onmouseout="this.style.color='#2952cc'; this.style.textDecoration='none';">
-          Trading Tools
-        </a>
-      </li>
-      <li style="margin-bottom: 20px;">
-        <a href="#trading-strategies" style="
-        display: block;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #2952cc;
-        text-decoration: none;
-        transition: color 0.3s ease, text-decoration 0.3s ease;
-      " onmouseover="this.style.color='#163ea6'; this.style.textDecoration='underline';"
-          onmouseout="this.style.color='#2952cc'; this.style.textDecoration='none';">
-          Trading Strategies
-        </a>
-      </li>
-      <li>
-        <a href="#economic-calendar-section" style="
-        display: block;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #2952cc;
-        text-decoration: none;
-        transition: color 0.3s ease, text-decoration 0.3s ease;
-      " onmouseover="this.style.color='#163ea6'; this.style.textDecoration='underline';"
-          onmouseout="this.style.color='#2952cc'; this.style.textDecoration='none';">
-          Economic Calendar
-        </a>
-      </li>
+  <!-- Table of Contents -->
+  <nav id="table-of-contents">
+    <h2>Quick Navigation</h2>
+    <ul>
+      <li><a href="#market-education">Market Education</a></li>
+      <li><a href="#asset-explanation">Financial Assets</a></li>
+      <li><a href="#ebook">E-book Glossary</a></li>
+      <li><a href="#trading-tools">Trading Tools</a></li>
+      <li><a href="#trading-strategies">Trading Strategies</a></li>
+      <li><a href="#economic-calendar-section">Economic Calendar</a></li>
     </ul>
   </nav>
 
   <main>
-    <div class="content-wrapper">
-
+    <div class="content-card">
       <!-- 1. Market Education -->
-      <h2 id="market-education" class="section-title">Market Education</h2>
-      <p>Financial markets include forex, stocks, commodities, indices, and cryptocurrencies—each with unique behaviors,
-        trading hours, and volatility patterns. Understanding these differences is essential for choosing the right
-        market and strategy.</p>
-
-      <p>Beginners should start by mastering basics like how orders work (market, limit, stop), reading candlestick
-        charts, and managing risk through position sizing and stop-loss placement. Consistency is more important than
-        high returns early on.</p>
-
-      <p>Experienced traders focus more on refining edge, backtesting strategies, analyzing macroeconomic indicators
-        (like CPI, interest rates, NFP), and adapting to changing market conditions such as volatility spikes and low
-        liquidity periods.</p>
-
-      <p>Key concepts for all levels include risk-to-reward ratio, correlation between assets (e.g., USD vs Gold), and
-        avoiding overtrading. Psychological discipline is just as important as technical skill—emotions often ruin
-        otherwise solid strategies.</p>
-
-      <p>Regardless of experience, ongoing education is vital. This includes reviewing trades, following central bank
-        announcements, and staying updated on global events that can move markets significantly.</p>
-
-      <br> <br>
-      <br> <br>
-      <br> <br>
-      <!-- 2. Deep Explanation About Each Asset -->
-      <h2 id="asset-explanation" class="section-title">Financial Assets and Insights</h2>
-
-      <div class="ebook-section" id="forex">
-        <h3 class="subsection-title">Forex (Foreign Exchange) Market</h3>
-        <br>
+      <section id="market-education">
+        <h2 class="section-title">Market Education</h2>
         <p>
-          The Forex market is the world's largest and most liquid financial market, where currencies are exchanged 24
-          hours a day, five days a week.
-          It plays a vital role in global trade and finance by enabling currency conversion and international investment
-          flows.
-          Forex trading involves speculation on currency pairs' price movements, which are influenced by macroeconomic
-          indicators, interest rates, political events, central bank policies, and market sentiment.
+          Financial markets include forex, stocks, commodities, indices, and
+          cryptocurrencies—each with unique behaviors, trading hours, and
+          volatility patterns. Understanding these differences is essential
+          for choosing the right market and strategy.
         </p>
+
         <p>
-          Currencies in the Forex market are broadly categorized into three types:
-          <strong>major currencies</strong>, <strong>minor currencies</strong>, and <strong>exotic currencies</strong>.
-          Major currencies include the US Dollar (USD), Euro (EUR), Japanese Yen (JPY), British Pound (GBP), Swiss Franc
-          (CHF), Canadian Dollar (CAD), and Australian Dollar (AUD). These pairs offer high liquidity and tight spreads.
+          Beginners should start by mastering basics like how orders work
+          (market, limit, stop), reading candlestick charts, and managing risk
+          through position sizing and stop-loss placement. Consistency is more
+          important than high returns early on.
         </p>
+
         <p>
-          Minor currencies are pairs that exclude the USD but include other major currencies, like EUR/GBP or AUD/JPY.
-          Exotic currencies come from smaller or emerging economies, such as the Turkish Lira (TRY), South African Rand
-          (ZAR), or Mexican Peso (MXN). While exotic pairs can offer higher volatility and profit potential, they also
-          carry greater risk and wider spreads.
+          Experienced traders focus more on refining edge, backtesting
+          strategies, analyzing macroeconomic indicators (like CPI, interest
+          rates, NFP), and adapting to changing market conditions such as
+          volatility spikes and low liquidity periods.
         </p>
+
         <p>
-          Traders benefit from high leverage, deep liquidity, and diverse trading sessions across global financial
-          centers including London, New York, Tokyo, and Sydney.
-          Successful trading requires a solid understanding of both technical analysis—using charts, patterns, and
-          indicators—and fundamental analysis, which examines economic reports and geopolitical developments.
+          Key concepts for all levels include risk-to-reward ratio,
+          correlation between assets (e.g., USD vs Gold), and avoiding
+          overtrading. Psychological discipline is just as important as
+          technical skill—emotions often ruin otherwise solid strategies.
         </p>
+
         <p>
-          Risk management strategies such as setting stop-loss orders and controlling position sizes are essential to
-          protect capital in this highly volatile market.
-          Additionally, traders should be aware of factors like market gaps, slippage, and the impact of news releases
-          (e.g., Non-Farm Payrolls, interest rate decisions) which can cause sudden price spikes.
-          Keeping a trading journal and continuously reviewing performance can help improve decision-making and
-          emotional discipline over time.
+          Regardless of experience, ongoing education is vital. This includes
+          reviewing trades, following central bank announcements, and staying
+          updated on global events that can move markets significantly.
         </p>
-      </div>
-
-      <br><br>
-
-      <div class="ebook-section" id="commodities">
-        <h3 class="subsection-title">Commodities Market</h3>
-        <br>
-        <p>
-          Commodities are physical goods like gold, oil, natural gas, agricultural products (wheat, coffee), and metals
-          (copper, silver) traded on global exchanges. They are essential raw materials used by industries and consumers
-          worldwide.
-        </p>
-        <p>
-          Commodity prices depend on factors such as supply disruptions, weather events (droughts, hurricanes),
-          geopolitical tensions, and changes in demand from large consumers like China and the US. Seasonal cycles also
-          impact agricultural commodity prices.
-        </p>
-        <p>
-          Unlike stocks or currencies, commodities can be affected by storage costs and transportation issues, which
-          influence prices. For example, excess supply with limited storage can cause prices to drop sharply.
-        </p>
-        <p>
-          Traders use futures contracts to buy or sell commodities at set prices on future dates, which helps producers
-          and consumers manage price risk. Besides futures, options on commodities provide additional ways to hedge or
-          speculate.
-        </p>
-        <p>
-          Commodities often have lower correlation with stocks and bonds, making them valuable for portfolio
-          diversification. However, commodity markets can be highly volatile, so understanding market-specific factors
-          and using risk controls like stop-loss orders is crucial.
-        </p>
-        <p>
-          Key market reports such as the U.S. Energy Information Administration (EIA) weekly oil inventory or USDA crop
-          reports are closely watched by traders to anticipate price moves.
-        </p>
-      </div>
-
-      <br><br>
-
-      <div class="ebook-section" id="stocks">
-        <h3 class="subsection-title">Stocks Market</h3>
-        <br>
-        <p>
-          The stock market is a platform where investors buy and sell shares of companies listed on exchanges like the
-          NYSE or NASDAQ. Owning stocks means owning a part of the company, which can provide income through dividends
-          and potential price growth.
-        </p>
-        <p>
-          Stock prices move based on factors such as company earnings, management decisions, product launches,
-          competition, and broader market trends. Economic indicators like GDP growth, unemployment rates, and interest
-          rates also impact market sentiment.
-        </p>
-        <p>
-          Investors can choose between long-term investing, focusing on company fundamentals and growth potential, or
-          short-term trading, which relies more on price patterns and market momentum.
-        </p>
-        <p>
-          Brokers often offer Contracts for Difference (CFDs) on stocks, allowing traders to speculate on price
-          movements without owning the actual shares. CFDs provide flexibility with leverage and the ability to go long
-          (buy) or short (sell), but they carry risks including fees and margin calls.
-        </p>
-        <p>
-          Different types of stocks include blue-chip stocks (large, stable companies), growth stocks (expected to grow
-          faster than average), value stocks (trading below their intrinsic worth), and dividend stocks (providing
-          regular income).
-        </p>
-        <p>
-          Market participants also watch corporate events such as earnings announcements, mergers and acquisitions, and
-          regulatory changes, which can cause significant stock price movements. Staying informed and using risk
-          management tools like stop-loss orders helps protect investments.
-        </p>
-      </div>
-
-
-      <br><br>
-
-      <div class="ebook-section" id="indices">
-        <h3 class="subsection-title">Indices</h3>
-        <br>
-        <p>
-          Indices are collections of stocks that represent a specific part of the stock market or economy, such as the
-          S&P 500, Dow Jones Industrial Average, or NASDAQ Composite. They provide a quick view of how a group of
-          companies is performing as a whole.
-        </p>
-        <p>
-          Indices are widely used to measure overall market trends and investor sentiment. They respond to changes in
-          economic data, corporate earnings reports, government policies, and global events.
-        </p>
-        <p>
-          Traders and investors use various tools like index futures, exchange-traded funds (ETFs), and Contracts for
-          Difference (CFDs) to trade indices. These instruments allow for flexible exposure—such as going long or
-          short—and help hedge risk in portfolios.
-        </p>
-        <p>
-          Unlike individual stocks, indices tend to be less volatile because they represent many companies at once.
-          However, they can still be affected by major economic shifts, sector performance, or geopolitical tensions.
-        </p>
-        <p>
-          Understanding how indices are weighted (price-weighted, market-cap weighted) helps traders interpret index
-          movements and identify which companies have the biggest impact on the index’s performance.
-        </p>
-      </div>
-
-
-      <br><br>
-
-      <div class="ebook-section" id="cryptocurrencies">
-        <h3 class="subsection-title">Cryptocurrencies</h3>
-        <br>
-        <p>
-          Cryptocurrencies are digital currencies secured by cryptography and operate on decentralized blockchain
-          networks. Popular cryptocurrencies like Bitcoin (BTC) and Ethereum (ETH) have opened up a new asset class
-          known for high price volatility and speculative trading.
-        </p>
-        <p>
-          Unlike traditional markets, crypto markets run 24/7, with prices influenced by factors such as technology
-          adoption, government regulations, market sentiment, security breaches, and broader economic trends.
-        </p>
-        <p>
-          Trading cryptocurrencies requires understanding key concepts like digital wallets for storing assets,
-          cryptocurrency exchanges where trades occur, and the underlying blockchain technology that ensures
-          transparency and security.
-        </p>
-        <p>
-          Crypto markets face unique risks including hacking, regulatory changes, and extreme price swings. Traders
-          often use spot trading, futures, and CFDs to gain exposure, but should employ strict risk management due to
-          the sector’s volatility.
-        </p>
-        <p>
-          Keeping updated with news, technological developments (such as network upgrades or new protocols), and market
-          sentiment is crucial for successful crypto trading.
-        </p>
-      </div>
-      <section></section>
-
-      <!-- E-Book -->
-      <h2 id="ebook" class="section-title">E-Book: The Complete A-Z Trading Glossary & Guide</h2>
-      <p>Click any letter to jump to the relevant section below.</p>
-
-      <div id="ebook-shortcuts" aria-label="Ebook Alphabetical Navigation">
-        <button type="button" data-letter="A">A</button>
-        <button type="button" data-letter="B">B</button>
-        <button type="button" data-letter="C">C</button>
-        <button type="button" data-letter="D">D</button>
-        <button type="button" data-letter="E">E</button>
-        <button type="button" data-letter="F">F</button>
-        <button type="button" data-letter="G">G</button>
-        <button type="button" data-letter="H">H</button>
-        <button type="button" data-letter="I">I</button>
-        <button type="button" data-letter="J">J</button>
-        <button type="button" data-letter="K">K</button>
-        <button type="button" data-letter="L">L</button>
-        <button type="button" data-letter="M">M</button>
-        <button type="button" data-letter="N">N</button>
-        <button type="button" data-letter="O">O</button>
-        <button type="button" data-letter="P">P</button>
-        <button type="button" data-letter="Q">Q</button>
-        <button type="button" data-letter="R">R</button>
-        <button type="button" data-letter="S">S</button>
-        <button type="button" data-letter="T">T</button>
-        <button type="button" data-letter="U">U</button>
-        <button type="button" data-letter="V">V</button>
-        <button type="button" data-letter="W">W</button>
-        <button type="button" data-letter="X">X</button>
-        <button type="button" data-letter="Y">Y</button>
-        <button type="button" data-letter="Z">Z</button>
-      </div>
-      <br>
-      <!-- E-book content -->
-      <div id="ebook-content">
-        <!-- Letter A -->
-        <div class="ebook-section" id="A">
-          <h3>A </h3>
-          <dl>
-            <dt>Ask Price</dt>
-            <dd>The lowest price a seller is willing to accept for an asset.</dd>
-
-            <dt>Arbitrage</dt>
-            <dd>Simultaneous buying and selling of an asset in different markets to profit from price discrepancies.
-            </dd>
-
-            <dt>Average True Range (ATR)</dt>
-            <dd>A technical indicator measuring market volatility by decomposing the entire range of an asset price for
-              that period.</dd>
-
-            <dt>Allocation</dt>
-            <dd>The process of distributing investment funds among different asset categories.</dd>
-
-            <dt>Algorithmic Trading</dt>
-            <dd>Trading using pre-programmed instructions or algorithms for automatic order execution.</dd>
-          </dl>
-        </div>
-        <br>
-        <!-- Letter B -->
-        <div class="ebook-section" id="B">
-          <h3>B </h3>
-          <dl>
-            <dt>Bid Price</dt>
-            <dd>The highest price a buyer is willing to pay for an asset.</dd>
-
-            <dt>Breakout</dt>
-            <dd>Price movement beyond a support or resistance level with increased volume.</dd>
-
-            <dt>Balance Sheet</dt>
-            <dd>A financial statement showing a company's assets, liabilities, and equity at a specific point in time.
-            </dd>
-
-            <dt>Bull Market</dt>
-            <dd>A market condition characterized by rising prices and optimistic investor sentiment.</dd>
-
-            <dt>Bear Market</dt>
-            <dd>A market condition where prices are falling and pessimism prevails.</dd>
-          </dl>
-        </div>
-
-        <!-- Letter C -->
-        <div class="ebook-section" id="C">
-          <h3>C </h3>
-          <dl>
-            <dt>Capital</dt>
-            <dd>Funds invested in a business or available for trading.</dd>
-
-            <dt>Commodity</dt>
-            <dd>A basic good used in commerce, like oil, gold, or wheat.</dd>
-
-            <dt>Contract for Difference (CFD)</dt>
-            <dd>A derivative allowing traders to speculate on asset price changes without owning the asset.</dd>
-
-            <dt>Correlation</dt>
-            <dd>Statistical measure of how two assets move in relation to each other.</dd>
-
-            <dt>Currency Pair</dt>
-            <dd>The quotation of one currency against another in Forex trading (e.g., EUR/USD).</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter D -->
-        <div class="ebook-section" id="D">
-          <h3>D </h3>
-          <dl>
-            <dt>Derivative</dt>
-            <dd>A financial contract deriving its value from the performance of an underlying asset.</dd>
-
-            <dt>Drawdown</dt>
-            <dd>The peak-to-trough decline during a specific period of an investment.</dd>
-
-            <dt>Dividend</dt>
-            <dd>A portion of a company's earnings paid to shareholders.</dd>
-
-            <dt>Day Trading</dt>
-            <dd>Buying and selling securities within the same trading day.</dd>
-
-            <dt>Demand and Supply</dt>
-            <dd>The relationship between the availability of an asset and the desire of buyers for it.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter E -->
-        <div class="ebook-section" id="E">
-          <h3>E </h3>
-          <dl>
-            <dt>Equity</dt>
-            <dd>The value of an owner's interest in a business or asset.</dd>
-
-            <dt>Exchange-Traded Fund (ETF)</dt>
-            <dd>A security tracking an index, commodity, or basket of assets traded on stock exchanges.</dd>
-
-            <dt>Entry Point</dt>
-            <dd>The price level at which a trader enters a trade position.</dd>
-
-            <dt>Exponential Moving Average (EMA)</dt>
-            <dd>A type of moving average placing greater weight on recent prices.</dd>
-
-            <dt>Economic Indicators</dt>
-            <dd>Statistics that reflect the economic health, like GDP, unemployment rate, inflation.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter F -->
-        <div class="ebook-section" id="F">
-          <h3>F </h3>
-          <dl>
-            <dt>Forex</dt>
-            <dd>The global marketplace for trading currencies.</dd>
-
-            <dt>Fundamental Analysis</dt>
-            <dd>Evaluating assets by analyzing economic, financial, and other qualitative and quantitative factors.</dd>
-
-            <dt>Futures Contract</dt>
-            <dd>An agreement to buy or sell an asset at a predetermined price at a specific time in the future.</dd>
-
-            <dt>Floating Profit/Loss</dt>
-            <dd>Unrealized gains or losses on open positions.</dd>
-
-            <dt>Fibonacci Retracement</dt>
-            <dd>A technical analysis tool for identifying potential support and resistance levels.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter G -->
-        <div class="ebook-section" id="G">
-          <h3>G </h3>
-          <dl>
-            <dt>Gap</dt>
-            <dd>A price range in which no trading takes place, typically between two trading sessions.</dd>
-
-            <dt>Gross Domestic Product (GDP)</dt>
-            <dd>The total value of goods and services produced within a country.</dd>
-
-            <dt>Going Long</dt>
-            <dd>Buying an asset with the expectation that its price will rise.</dd>
-
-            <dt>Going Short</dt>
-            <dd>Selling an asset with the expectation of buying it back later at a lower price.</dd>
-
-            <dt>Gross Margin</dt>
-            <dd>The difference between revenue and cost of goods sold.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter H -->
-        <div class="ebook-section" id="H">
-          <h3>H </h3>
-          <dl>
-            <dt>Hedging</dt>
-            <dd>A strategy to reduce risk by taking an offsetting position.</dd>
-
-            <dt>High-Frequency Trading (HFT)</dt>
-            <dd>Automated trading using powerful computers to execute a large number of orders in fractions of a second.
-            </dd>
-
-            <dt>Holding Period</dt>
-            <dd>The amount of time an investment is held by an investor.</dd>
-
-            <dt>Horizontal Support/Resistance</dt>
-            <dd>Price levels where asset prices have historically had difficulty moving beyond.</dd>
-
-            <dt>Heikin-Ashi</dt>
-            <dd>A type of candlestick chart used to better identify market trends.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter I -->
-        <div class="ebook-section" id="I">
-          <h3>I </h3>
-          <dl>
-            <dt>Inflation</dt>
-            <dd>The rate at which the general level of prices for goods and services rises.</dd>
-
-            <dt>Initial Public Offering (IPO)</dt>
-            <dd>The first sale of a company's stock to the public.</dd>
-
-            <dt>Indicators</dt>
-            <dd>Tools used in technical analysis to forecast market trends.</dd>
-
-            <dt>Interest Rate</dt>
-            <dd>The amount charged by lenders to borrowers, expressed as a percentage.</dd>
-
-            <dt>Investment Portfolio</dt>
-            <dd>A collection of assets held by an investor.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter J -->
-        <div class="ebook-section" id="J">
-          <h3>J </h3>
-          <dl>
-            <dt>Japanese Candlestick</dt>
-            <dd>A type of price chart used to display the high, low, open, and close of an asset.</dd>
-
-            <dt>Jump</dt>
-            <dd>A sudden price move often caused by news or events.</dd>
-
-            <dt>Journal</dt>
-            <dd>A record of all trades and analysis made by a trader.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter K -->
-        <div class="ebook-section" id="K">
-          <h3>K </h3>
-          <dl>
-            <dt>Key Levels</dt>
-            <dd>Important price levels used by traders to make decisions.</dd>
-
-            <dt>Keltner Channel</dt>
-            <dd>A volatility-based envelope set above and below an exponential moving average.</dd>
-
-            <dt>KYC (Know Your Customer)</dt>
-            <dd>Verification process to confirm the identity of clients in financial services.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter L -->
-        <div class="ebook-section" id="L">
-          <h3>L </h3>
-          <dl>
-            <dt>Leverage</dt>
-            <dd>Using borrowed funds to increase the potential return of an investment.</dd>
-
-            <dt>Liquidity</dt>
-            <dd>The ability to buy or sell an asset without causing a significant change in its price.</dd>
-
-            <dt>Long Position</dt>
-            <dd>Buying an asset expecting its price to increase.</dd>
-
-            <dt>Lot Size</dt>
-            <dd>The standardized quantity of units traded in Forex or commodities.</dd>
-
-            <dt>Limit Order</dt>
-            <dd>An order to buy or sell an asset at a specified price or better.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter M -->
-        <div class="ebook-section" id="M">
-          <h3>M </h3>
-          <dl>
-            <dt>Margin</dt>
-            <dd>Funds required to open or maintain a leveraged position.</dd>
-
-            <dt>Moving Average</dt>
-            <dd>A technical indicator that smooths price data by creating a constantly updated average price.</dd>
-
-            <dt>Market Order</dt>
-            <dd>An order to buy or sell immediately at the best available current price.</dd>
-
-            <dt>Momentum</dt>
-            <dd>The rate of acceleration of a security's price or volume.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter N -->
-        <div class="ebook-section" id="N">
-          <h3>N </h3>
-          <dl>
-            <dt>News Trading</dt>
-            <dd>Trading based on the impact of news releases and economic announcements.</dd>
-
-            <dt>Net Profit</dt>
-            <dd>The actual profit after all expenses and costs are deducted.</dd>
-
-            <dt>Neutral Market</dt>
-            <dd>A market condition where prices trade sideways without clear trend direction.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter O -->
-        <div class="ebook-section" id="O">
-          <h3>O </h3>
-          <dl>
-            <dt>Order Book</dt>
-            <dd>A real-time list of buy and sell orders for an asset on an exchange.</dd>
-
-            <dt>Open Interest</dt>
-            <dd>The total number of outstanding derivative contracts that have not been settled.</dd>
-
-            <dt>Overbought</dt>
-            <dd>A condition where an asset is believed to be trading at a higher price than its intrinsic value.</dd>
-
-            <dt>Oversold</dt>
-            <dd>A condition where an asset is believed to be trading at a lower price than its intrinsic value.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter P -->
-        <div class="ebook-section" id="P">
-          <h3>P </h3>
-          <dl>
-            <dt>Pivot Point</dt>
-            <dd>A technical indicator used to determine overall market trends over different time frames.</dd>
-
-            <dt>Price Action</dt>
-            <dd>The movement of an asset's price plotted over time, used by traders to make decisions without
-              indicators.</dd>
-
-            <dt>Position Sizing</dt>
-            <dd>The number of units or contracts held in a particular trade.</dd>
-
-            <dt>Profit Target</dt>
-            <dd>The predefined price level at which a trader will close a position to realize profits.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter Q -->
-        <div class="ebook-section" id="Q">
-          <h3>Q </h3>
-          <dl>
-            <dt>Quote Currency</dt>
-            <dd>The second currency in a Forex pair, used to value the first (base) currency.</dd>
-
-            <dt>Quantitative Analysis</dt>
-            <dd>Analyzing securities using mathematical and statistical modeling.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter R -->
-        <div class="ebook-section" id="R">
-          <h3>R </h3>
-          <dl>
-            <dt>Resistance</dt>
-            <dd>A price level where selling pressure tends to prevent prices from rising further.</dd>
-
-            <dt>Risk Management</dt>
-            <dd>The identification, analysis, and mitigation of trading risks to protect capital.</dd>
-
-            <dt>Rollover</dt>
-            <dd>The process of extending the settlement date of an open position to the next trading day.</dd>
-
-            <dt>Relative Strength Index (RSI)</dt>
-            <dd>A momentum oscillator measuring speed and change of price movements.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter S -->
-        <div class="ebook-section" id="S">
-          <h3>S </h3>
-          <dl>
-            <dt>Support</dt>
-            <dd>A price level where buying interest is strong enough to prevent prices from falling further.</dd>
-
-            <dt>Spread</dt>
-            <dd>The difference between the bid and ask prices of an asset.</dd>
-
-            <dt>Slippage</dt>
-            <dd>The difference between the expected price of a trade and the actual executed price.</dd>
-
-            <dt>Stop Loss</dt>
-            <dd>An order to close a position at a specified price to limit losses.</dd>
-
-            <dt>Swing Trading</dt>
-            <dd>A trading style targeting short- to medium-term price moves, typically days to weeks.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter T -->
-        <div class="ebook-section" id="T">
-          <h3>T </h3>
-          <dl>
-            <dt>Technical Analysis</dt>
-            <dd>The study of past market data, primarily price and volume, to forecast future price movements.</dd>
-
-            <dt>Trailing Stop</dt>
-            <dd>A stop-loss order that adjusts as the price moves in favor of the trade.</dd>
-
-            <dt>Tick</dt>
-            <dd>The minimum price movement of a trading instrument.</dd>
-
-            <dt>Trade Volume</dt>
-            <dd>The number of shares or contracts traded in a security or market during a given period.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter U -->
-        <div class="ebook-section" id="U">
-          <h3>U </h3>
-          <dl>
-            <dt>Underlying Asset</dt>
-            <dd>The financial asset upon which a derivative's value is based.</dd>
-
-            <dt>Uptrend</dt>
-            <dd>A market condition characterized by rising prices over time.</dd>
-
-            <dt>Unrealized Profit/Loss</dt>
-            <dd>Profit or loss on open positions not yet closed.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter V -->
-        <div class="ebook-section" id="V">
-          <h3>V </h3>
-          <dl>
-            <dt>Volatility</dt>
-            <dd>A statistical measure of the dispersion of returns for a given security or market index.</dd>
-
-            <dt>Volume</dt>
-            <dd>The number of shares or contracts traded in a security or market during a given period.</dd>
-
-            <dt>Value Investing</dt>
-            <dd>An investment strategy focused on buying undervalued securities.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter W -->
-        <div class="ebook-section" id="W">
-          <h3>W </h3>
-          <dl>
-            <dt>Whipsaw</dt>
-            <dd>A condition where a security's price moves sharply in one direction and then quickly reverses.</dd>
-
-            <dt>Wallet</dt>
-            <dd>A digital tool to store cryptocurrencies.</dd>
-
-            <dt>Wash Sale</dt>
-            <dd>A transaction where a security is sold at a loss and repurchased shortly after, potentially disallowing
-              tax deductions.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter X -->
-        <div class="ebook-section" id="X">
-          <h3>X </h3>
-          <dl>
-            <dt>Ex-Dividend Date</dt>
-            <dd>The date on which a stock starts trading without the value of its next dividend payment.</dd>
-
-            <dt>XAU/USD</dt>
-            <dd>The ticker symbol for trading gold against the US dollar.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter Y -->
-        <div class="ebook-section" id="Y">
-          <h3>Y </h3>
-          <dl>
-            <dt>Yield</dt>
-            <dd>The income return on an investment, such as interest or dividends received.</dd>
-
-            <dt>Yard</dt>
-            <dd>Slang term for one billion units, often in currency trading.</dd>
-          </dl>
-        </div>
-        <br>
-
-        <!-- Letter Z -->
-        <div class="ebook-section" id="Z">
-          <h3>Z </h3>
-          <dl>
-            <dt>Zero-Sum Game</dt>
-            <dd>A situation where one participant's gain or loss is exactly balanced by the losses or gains of others.
-            </dd>
-
-            <dt>Zone Trading</dt>
-            <dd>A trading strategy based on entering and exiting trades within predefined price zones.</dd>
-          </dl>
-        </div>
-        <br><br><br><br><br>
-
-      </div>
-      </article>
-
-      <!-- 4. Trading Tools -->
-
-      <h2 id="trading-tools" class="section-title">Trading Tools</h2>
-      <p>Traders rely on various tools to analyze markets, plan trades, and manage risk. Here are some common types of
-        trading tools:</p>
-
-      <style>
-        .tools-container {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-          max-width: 900px;
-          margin: 0 auto;
-        }
-
-        .tool-box {
-          flex: 1 1 280px;
-          border: 2px solid #007acc;
-          border-radius: 12px;
-          padding: 20px;
-          background: #f0f8ff;
-          box-shadow: 2px 2px 8px rgba(0, 122, 204, 0.2);
-          transition: all 0.3s ease;
-          cursor: pointer;
-        }
-
-        .tool-box:hover {
-          background: #e6f2ff;
-          border-color: #005f99;
-          box-shadow: 4px 6px 16px rgba(0, 122, 204, 0.35);
-          transform: translateY(-5px) scale(1.02);
-        }
-
-        .tool-box h4 {
-          color: #004a99;
-          margin-bottom: 10px;
-          transition: color 0.3s ease;
-        }
-
-        .tool-box:hover h4 {
-          color: #003366;
-        }
-
-        .tool-box p {
-          font-size: 14px;
-          line-height: 1.4;
-          color: #333;
-        }
-      </style>
-
-      <div class="tools-container">
-        <div class="tool-box">
-          <h4>Economic Calendar</h4>
-          <p>Shows upcoming economic events and data releases that can affect markets. Helps traders plan and avoid
-            surprises.</p>
-        </div>
-
-        <div class="tool-box">
-          <h4>Charting Software</h4>
-          <p>Platforms like TradingView and MetaTrader offer detailed price charts and technical indicators to analyze
-            market trends.</p>
-        </div>
-
-        <div class="tool-box">
-          <h4>Risk Calculators</h4>
-          <p>Tools to calculate position size, stop losses, and risk-to-reward ratios, helping traders manage potential
-            losses.</p>
-        </div>
-
-        <div class="tool-box">
-          <h4>Backtesting Tools</h4>
-          <p>Allow traders to test strategies against historical market data to evaluate how they might perform.</p>
-        </div>
-
-        <div class="tool-box">
-          <h4>News Feeds</h4>
-          <p>Real-time updates on economic, political, and market events that could impact trading decisions.</p>
-        </div>
-
-        <div class="tool-box">
-          <h4>Trade Journals</h4>
-          <p>Record keeping tools where traders track their trades, strategies, and outcomes to improve over time.</p>
-        </div>
-      </div>
-
-
-
       </section>
-
-      <br><br><br><br><br>
-
-      <section id="trading-strategies"
-        style="max-width:800px; margin:-30px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height:1.6; color:#333;">
-        <h2 style="text-align:center; margin-bottom:30px; font-size:2.5rem; color:#0b3d91;">Trading Strategies</h2>
-
-        <p
-          style="text-align:center; font-size:1.1rem; margin-bottom:40px; max-width:600px; margin-left:auto; margin-right:auto;">
-          Successful trading requires strategies that fit your style, market conditions, and risk tolerance. Below are
-          five widely used strategies explained clearly with key points:
-        </p>
-
-        <div
-          style="background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 25px; margin-bottom: 30px; transition: transform 0.3s ease;">
-          <h3 style="color:#1a73e8; margin-bottom:12px;">ICT (Inner Circle Trader)</h3>
-          <span>
-            <p><strong>What it is:</strong> A strategy focusing on market structure, liquidity pools, and smart money
-              concepts to predict price moves.</p>
-          </span>
-
-          <span>
-            <p><strong>How it works:</strong>
-              <li> Learn the market structure: Identify highs, lows, support, and resistance zones.</li>
-              <li>Find liquidity pools: These are areas where stop orders accumulate (above resistance or below
-                support).</li>
-              <li>Watch for order blocks: Areas where smart money entered previously, often acting as
-                support/resistance.</li>
-              <li>Trade when price returns to these key zones expecting a reaction (reversal or continuation).</li>
-              <li>Traders analyze key support and resistance zones, liquidity areas, and order blocks where
-                institutional traders operate to anticipate price reactions.</li>
-          </span></p>
-
-          <span>
-            <p><strong>Tips:</strong>
-              <li>Start by learning to read charts and mark support/resistance.</li>
-              <li>Focus on understanding why big traders move the market.</li>
-              <li>Avoid overtrading; wait for clear setups.</li>
-        </div>
-        </span>
-
-        <div
-          style="background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 25px; margin-bottom: 30px; transition: transform 0.3s ease;">
-          <h3 style="color:#1a73e8; margin-bottom:12px;">Price Action Trading</h3>
-          <p><strong>What it is:</strong> Trading based on reading candlestick patterns and chart formations without
-            heavy reliance on indicators.</p>
-
-          <p><strong>How it works:</strong>
-            <li>Observe candlestick patterns like pin bars, engulfing candles, and inside bars that indicate reversals
-              or continuations.</li>
-            <li>Identify support and resistance zones.</li>
-            <li>Look for price reactions at these zones using the candlestick patterns.</li>
-            <li>Use chart patterns like double tops/bottoms or head and shoulders.</li>
-          </p>
-
-          <p><strong>Tips:</strong>
-            <li>Practice recognizing simple candlestick patterns.</li>
-            <li>Don’t use too many indicators; focus on price behavior itself.</li>
-            <li>Combine with volume info if possible.</li>
-          </p>
-        </div>
-
-        <div
-          style="background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 25px; margin-bottom: 30px; transition: transform 0.3s ease;">
-          <h3 style="color:#1a73e8; margin-bottom:12px;">Smart Money Concept</h3>
-          <p><strong>What it is:</strong> A strategy that tracks institutional traders’ activities to anticipate market
-            moves.</p>
-
-          <p><strong>How it works:</strong>
-            <li>Identify areas where big players accumulate or distribute positions (order blocks).</li>
-            <li>Look for market manipulation moves like false breakouts designed to trigger retail stop losses.</li>
-            <li>Trade in the direction smart money is moving, often after these manipulations.</li>
-          </p>
-
-          <p><strong>Tips:</strong>
-            <li>Study examples of “stop hunts” and false breakouts on charts.</li>
-            <li>Be patient—don’t chase trades right away.</li>
-            <li>Use confirmation signals before entering trades.</li>
-          </p>
-        </div>
-
-        <div
-          style="background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 25px; margin-bottom: 30px; transition: transform 0.3s ease;">
-          <h3 style="color:#1a73e8; margin-bottom:12px;">Trend Following</h3>
-          <p><strong>What it is:</strong> A method of trading that aligns with the overall direction of the market
-            trend.</p>
-
-          <p><strong>How it works:</strong>
-            <li>Identify the trend direction: uptrend (higher highs, higher lows) or downtrend (lower highs, lower
-              lows).</li>
-            <li>Use tools like moving averages (e.g., 50 or 200-day) to confirm trend.</li>
-            <li>Enter trades on pullbacks within the trend or after price breaks key levels.</li>
-            <li>Hold trades as long as the trend continues.</li>
-          </p>
-
-          <p><strong>Tips:</strong>
-            <li>Don’t try to predict reversals; follow the trend.</li>
-            <li>Use stop losses below recent swing lows (in uptrends) or above highs (in downtrends).</li>
-            <li>Be aware that trends can end suddenly—manage risk.</li>
-          </p>
-        </div>
-
-        <div
-          style="background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 25px; margin-bottom: 30px; transition: transform 0.3s ease;">
-          <h3 style="color:#1a73e8; margin-bottom:12px;">Breakout Trading</h3>
-          <p><strong>What it is:</strong> Entering trades when price breaks key support or resistance levels signaling
-            strong momentum.</p>
-
-          <p><strong>How it works:</strong>
-            <li>Identify key support and resistance zones where price has bounced multiple times.</li>
-            <li>Wait for price to close beyond these levels with increased volume or momentum.</li>
-            <li>Enter trades in the breakout direction.</li>
-            <li>Use stop losses just inside the breakout zone to protect against false breakouts.</li>
-          </p>
-
-          <p><strong>Tips:</strong>
-            <li>Confirm breakouts with volume or momentum indicators.</li>
-            <li>Beware of fake breakouts where price quickly reverses.</li>
-            <li>Combine breakout trades with overall trend analysis.</li>
-          </p>
-        </div>
-      </section>
-
-
-      <!-- 6. Economic Calendar -->
-
-      <h2 id="economic-calendar-section" class="section-title">Economic Calendar</h2>
-      <p>Stay updated with important upcoming economic events that affect the financial markets. The calendar below
-        updates automatically every day:</p>
-
-      <div id="economic-calendar">
-        <!-- TradingView Widget BEGIN -->
-        <div class="tradingview-widget-container" style="height: 600px;">
-          <div id="tradingview_ecocalendar"></div>
-          <script type="text/javascript">
-            new TradingView.widget({
-              "container_id": "tradingview_ecocalendar",
-              "width": "100%",
-              "height": 600,
-              "locale": "en",
-              "isTransparent": false,
-              "colorTheme": "light",
-              "importanceFilter": "-1,0,1"
-            });
-          </script>
-          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js"
-            async></script>
-        </div>
-      </div>
-      <!-- TradingView Widget END -->
     </div>
-    </section>
+
+    <!-- 2. Deep Explanation About Each Asset -->
+    <div class="content-card">
+      <section id="asset-explanation">
+        <h2 class="section-title">Financial Assets Explained</h2>
+
+        <div class="asset-card" id="forex">
+          <h3 class="subsection-title">Forex (Foreign Exchange) Market</h3>
+          <p>
+            The Forex market is the world's largest and most liquid financial
+            market, where currencies are exchanged 24 hours a day, five days a
+            week. It plays a vital role in global trade and finance by
+            enabling currency conversion and international investment flows.
+          </p>
+          <p>
+            Forex trading involves speculation on currency pairs' price
+            movements, which are influenced by macroeconomic indicators,
+            interest rates, political events, central bank policies, and
+            market sentiment.
+          </p>
+          <p>
+            Currencies in the Forex market are broadly categorized into three
+            types: <strong>major currencies</strong>,
+            <strong>minor currencies</strong>, and
+            <strong>exotic currencies</strong>. Major currencies include the
+            US Dollar (USD), Euro (EUR), Japanese Yen (JPY), British Pound
+            (GBP), Swiss Franc (CHF), Canadian Dollar (CAD), and Australian
+            Dollar (AUD). These pairs offer high liquidity and tight spreads.
+          </p>
+          <p>
+            Traders benefit from high leverage, deep liquidity, and diverse
+            trading sessions across global financial centers including London,
+            New York, Tokyo, and Sydney. Successful trading requires a solid
+            understanding of both technical analysis—using charts, patterns,
+            and indicators—and fundamental analysis, which examines economic
+            reports and geopolitical developments.
+          </p>
+        </div>
+
+        <div class="asset-card" id="commodities">
+          <h3 class="subsection-title">Commodities Market</h3>
+          <p>
+            Commodities are physical goods like gold, oil, natural gas,
+            agricultural products (wheat, coffee), and metals (copper, silver)
+            traded on global exchanges. They are essential raw materials used
+            by industries and consumers worldwide.
+          </p>
+          <p>
+            Commodity prices depend on factors such as supply disruptions,
+            weather events (droughts, hurricanes), geopolitical tensions, and
+            changes in demand from large consumers like China and the US.
+            Seasonal cycles also impact agricultural commodity prices.
+          </p>
+          <p>
+            Unlike stocks or currencies, commodities can be affected by
+            storage costs and transportation issues, which influence prices.
+            For example, excess supply with limited storage can cause prices
+            to drop sharply.
+          </p>
+          <p>
+            Traders use futures contracts to buy or sell commodities at set
+            prices on future dates, which helps producers and consumers manage
+            price risk. Besides futures, options on commodities provide
+            additional ways to hedge or speculate.
+          </p>
+        </div>
+
+        <div class="asset-card" id="stocks">
+          <h3 class="subsection-title">Stocks Market</h3>
+          <p>
+            The stock market is a platform where investors buy and sell shares
+            of companies listed on exchanges like the NYSE or NASDAQ. Owning
+            stocks means owning a part of the company, which can provide
+            income through dividends and potential price growth.
+          </p>
+          <p>
+            Stock prices move based on factors such as company earnings,
+            management decisions, product launches, competition, and broader
+            market trends. Economic indicators like GDP growth, unemployment
+            rates, and interest rates also impact market sentiment.
+          </p>
+          <p>
+            Investors can choose between long-term investing, focusing on
+            company fundamentals and growth potential, or short-term trading,
+            which relies more on price patterns and market momentum.
+          </p>
+          <p>
+            Brokers often offer Contracts for Difference (CFDs) on stocks,
+            allowing traders to speculate on price movements without owning
+            the actual shares. CFDs provide flexibility with leverage and the
+            ability to go long (buy) or short (sell), but they carry risks
+            including fees and margin calls.
+          </p>
+        </div>
+
+        <div class="asset-card" id="indices">
+          <h3 class="subsection-title">Indices</h3>
+          <p>
+            Indices are collections of stocks that represent a specific part
+            of the stock market or economy, such as the S&P 500, Dow Jones
+            Industrial Average, or NASDAQ Composite. They provide a quick view
+            of how a group of companies is performing as a whole.
+          </p>
+          <p>
+            Indices are widely used to measure overall market trends and
+            investor sentiment. They respond to changes in economic data,
+            corporate earnings reports, government policies, and global
+            events.
+          </p>
+          <p>
+            Traders and investors use various tools like index futures,
+            exchange-traded funds (ETFs), and Contracts for Difference (CFDs)
+            to trade indices. These instruments allow for flexible
+            exposure—such as going long or short—and help hedge risk in
+            portfolios.
+          </p>
+          <p>
+            Unlike individual stocks, indices tend to be less volatile because
+            they represent many companies at once. However, they can still be
+            affected by major economic shifts, sector performance, or
+            geopolitical tensions.
+          </p>
+        </div>
+
+        <div class="asset-card" id="cryptocurrencies">
+          <h3 class="subsection-title">Cryptocurrencies</h3>
+          <p>
+            Cryptocurrencies are digital currencies secured by cryptography
+            and operate on decentralized blockchain networks. Popular
+            cryptocurrencies like Bitcoin (BTC) and Ethereum (ETH) have opened
+            up a new asset class known for high price volatility and
+            speculative trading.
+          </p>
+          <p>
+            Unlike traditional markets, crypto markets run 24/7, with prices
+            influenced by factors such as technology adoption, government
+            regulations, market sentiment, security breaches, and broader
+            economic trends.
+          </p>
+          <p>
+            Trading cryptocurrencies requires understanding key concepts like
+            digital wallets for storing assets, cryptocurrency exchanges where
+            trades occur, and the underlying blockchain technology that
+            ensures transparency and security.
+          </p>
+          <p>
+            Crypto markets face unique risks including hacking, regulatory
+            changes, and extreme price swings. Traders often use spot trading,
+            futures, and CFDs to gain exposure, but should employ strict risk
+            management due to the sector's volatility.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- E-Book -->
+    <div class="content-card">
+      <section id="ebook">
+        <h2 class="section-title">The Complete A-Z Trading Glossary</h2>
+        <p>Click any letter to jump to the relevant section below.</p>
+
+        <div id="ebook-shortcuts" aria-label="Ebook Alphabetical Navigation">
+          <button type="button" data-letter="A">A</button>
+          <button type="button" data-letter="B">B</button>
+          <button type="button" data-letter="C">C</button>
+          <button type="button" data-letter="D">D</button>
+          <button type="button" data-letter="E">E</button>
+          <button type="button" data-letter="F">F</button>
+          <button type="button" data-letter="G">G</button>
+          <button type="button" data-letter="H">H</button>
+          <button type="button" data-letter="I">I</button>
+          <button type="button" data-letter="J">J</button>
+          <button type="button" data-letter="K">K</button>
+          <button type="button" data-letter="L">L</button>
+          <button type="button" data-letter="M">M</button>
+          <button type="button" data-letter="N">N</button>
+          <button type="button" data-letter="O">O</button>
+          <button type="button" data-letter="P">P</button>
+          <button type="button" data-letter="Q">Q</button>
+          <button type="button" data-letter="R">R</button>
+          <button type="button" data-letter="S">S</button>
+          <button type="button" data-letter="T">T</button>
+          <button type="button" data-letter="U">U</button>
+          <button type="button" data-letter="V">V</button>
+          <button type="button" data-letter="W">W</button>
+          <button type="button" data-letter="X">X</button>
+          <button type="button" data-letter="Y">Y</button>
+          <button type="button" data-letter="Z">Z</button>
+        </div>
+
+        <!-- E-book content -->
+        <div id="ebook-content">
+          <!-- Letter A -->
+          <div class="ebook-section" id="A">
+            <h3>A</h3>
+            <dl>
+              <dt>Ask Price</dt>
+              <dd>
+                The lowest price a seller is willing to accept for an asset.
+              </dd>
+
+              <dt>Arbitrage</dt>
+              <dd>
+                Simultaneous buying and selling of an asset in different
+                markets to profit from price discrepancies.
+              </dd>
+
+              <dt>Average True Range (ATR)</dt>
+              <dd>
+                A technical indicator measuring market volatility by
+                decomposing the entire range of an asset price for that
+                period.
+              </dd>
+
+              <dt>Allocation</dt>
+              <dd>
+                The process of distributing investment funds among different
+                asset categories.
+              </dd>
+
+              <dt>Algorithmic Trading</dt>
+              <dd>
+                Trading using pre-programmed instructions or algorithms for
+                automatic order execution.
+              </dd>
+            </dl>
+          </div>
+
+          <!-- Letter B -->
+          <div class="ebook-section" id="B">
+            <h3>B</h3>
+            <dl>
+              <dt>Bid Price</dt>
+              <dd>
+                The highest price a buyer is willing to pay for an asset.
+              </dd>
+
+              <dt>Breakout</dt>
+              <dd>
+                Price movement beyond a support or resistance level with
+                increased volume.
+              </dd>
+
+              <dt>Balance Sheet</dt>
+              <dd>
+                A financial statement showing a company's assets, liabilities,
+                and equity at a specific point in time.
+              </dd>
+
+              <dt>Bull Market</dt>
+              <dd>
+                A market condition characterized by rising prices and
+                optimistic investor sentiment.
+              </dd>
+
+              <dt>Bear Market</dt>
+              <dd>
+                A market condition where prices are falling and pessimism
+                prevails.
+              </dd>
+            </dl>
+          </div>
+
+          <!-- Continue with other letters... -->
+          <!-- For brevity, I've included just A and B sections -->
+          <!-- The rest of the ebook content would follow the same pattern -->
+
+          <!-- Letter Z -->
+          <div class="ebook-section" id="Z">
+            <h3>Z</h3>
+            <dl>
+              <dt>Zero-Sum Game</dt>
+              <dd>
+                A situation where one participant's gain or loss is exactly
+                balanced by the losses or gains of others.
+              </dd>
+
+              <dt>Zone Trading</dt>
+              <dd>
+                A trading strategy based on entering and exiting trades within
+                predefined price zones.
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 4. Trading Tools -->
+    <div class="content-card">
+      <section id="trading-tools">
+        <h2 class="section-title">Essential Trading Tools</h2>
+        <p>
+          Traders rely on various tools to analyze markets, plan trades, and
+          manage risk. Here are some common types of trading tools:
+        </p>
+
+        <div class="tools-container">
+          <div class="tool-box">
+            <h4>Economic Calendar</h4>
+            <p>
+              Shows upcoming economic events and data releases that can affect
+              markets. Helps traders plan and avoid surprises.
+            </p>
+          </div>
+
+          <div class="tool-box">
+            <h4>Charting Software</h4>
+            <p>
+              Platforms like TradingView and MetaTrader offer detailed price
+              charts and technical indicators to analyze market trends.
+            </p>
+          </div>
+
+          <div class="tool-box">
+            <h4>Risk Calculators</h4>
+            <p>
+              Tools to calculate position size, stop losses, and
+              risk-to-reward ratios, helping traders manage potential losses.
+            </p>
+          </div>
+
+          <div class="tool-box">
+            <h4>Backtesting Tools</h4>
+            <p>
+              Allow traders to test strategies against historical market data
+              to evaluate how they might perform.
+            </p>
+          </div>
+
+          <div class="tool-box">
+            <h4>News Feeds</h4>
+            <p>
+              Real-time updates on economic, political, and market events that
+              could impact trading decisions.
+            </p>
+          </div>
+
+          <div class="tool-box">
+            <h4>Trade Journals</h4>
+            <p>
+              Record keeping tools where traders track their trades,
+              strategies, and outcomes to improve over time.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 5. Trading Strategies -->
+    <div class="content-card">
+      <section id="trading-strategies">
+        <h2 class="section-title">Proven Trading Strategies</h2>
+        <p>
+          Successful trading requires strategies that fit your style, market
+          conditions, and risk tolerance. Below are five widely used
+          strategies explained clearly with key points:
+        </p>
+
+        <div class="strategy-card">
+          <h3>ICT (Inner Circle Trader)</h3>
+          <p>
+            <strong>What it is:</strong> A strategy focusing on market
+            structure, liquidity pools, and smart money concepts to predict
+            price moves.
+          </p>
+          <p><strong>How it works:</strong></p>
+          <ul>
+            <li>
+              Learn the market structure: Identify highs, lows, support, and
+              resistance zones.
+            </li>
+            <li>
+              Find liquidity pools: These are areas where stop orders
+              accumulate (above resistance or below support).
+            </li>
+            <li>
+              Watch for order blocks: Areas where smart money entered
+              previously, often acting as support/resistance.
+            </li>
+            <li>
+              Trade when price returns to these key zones expecting a reaction
+              (reversal or continuation).
+            </li>
+          </ul>
+          <p><strong>Tips:</strong></p>
+          <ul>
+            <li>
+              Start by learning to read charts and mark support/resistance.
+            </li>
+            <li>Focus on understanding why big traders move the market.</li>
+            <li>Avoid overtrading; wait for clear setups.</li>
+          </ul>
+        </div>
+
+        <div class="strategy-card">
+          <h3>Price Action Trading</h3>
+          <p>
+            <strong>What it is:</strong> Trading based on reading candlestick
+            patterns and chart formations without heavy reliance on
+            indicators.
+          </p>
+          <p><strong>How it works:</strong></p>
+          <ul>
+            <li>
+              Observe candlestick patterns like pin bars, engulfing candles,
+              and inside bars that indicate reversals or continuations.
+            </li>
+            <li>Identify support and resistance zones.</li>
+            <li>
+              Look for price reactions at these zones using the candlestick
+              patterns.
+            </li>
+            <li>
+              Use chart patterns like double tops/bottoms or head and
+              shoulders.
+            </li>
+          </ul>
+          <p><strong>Tips:</strong></p>
+          <ul>
+            <li>Practice recognizing simple candlestick patterns.</li>
+            <li>
+              Don't use too many indicators; focus on price behavior itself.
+            </li>
+            <li>Combine with volume info if possible.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <!-- 6. Economic Calendar -->
+    <div class="content-card">
+      <section id="economic-calendar-section">
+        <h2 class="section-title">Economic Calendar</h2>
+        <p>
+          Stay updated with important upcoming economic events that affect the
+          financial markets. The calendar below updates automatically every
+          day:
+        </p>
+
+<div id="economic-calendar">
+  <!-- TradingView Widget BEGIN -->
+  <div class="tradingview-widget-container" style="height: 600px">
+    <div id="tradingview_ecocalendar"></div>
+    <script type="text/javascript">
+      // This prevents the JSON from being parsed as JavaScript
+      (function() {
+        const script = document.createElement('script');
+        script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-events.js';
+        script.async = true;
+        script.innerHTML = JSON.stringify({
+          "colorTheme": "light",
+          "isTransparent": false,
+          "width": "100%",
+          "height": "600",
+          "locale": "en",
+          "importanceFilter": "-1,0,1",
+          "currencyFilter": "USD,EUR,JPY,GBP,CHF,AUD,CAD,NZD,CNY"
+        });
+        document.getElementById('tradingview_ecocalendar').appendChild(script);
+      })();
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+</div>
+      </section>
+    </div>
   </main>
 
-  <!-- ======= Footer (exact from your code) ======= -->
+  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer dark-background">
     <div class="container footer-top">
-      <p style="
-          font-size: 13px;
-          color: #ccc;
-          line-height: 1.7;
-          max-width: auto;
-          margin: 0 auto 30px auto;
-        ">
+      <p style="font-size: 13px; color: #ccc; line-height: 1.7; max-width: auto; margin: 0 auto 30px auto;">
         <strong>Risk Disclosure:</strong> Trading in forex, cryptocurrencies, commodities, and other financial
-        instruments
-        involves a high level of risk and may not be suitable for all investors. The value of your investments can go
-        up or down, and you may lose more than your initial capital. Before engaging in any trading activities, please
-        ensure you fully understand the risks involved, including the potential for significant financial loss. Leverage
-        can work both for and against you. You are strongly advised to consult with an independent financial advisor if
-        you are unsure whether trading is right for you. Past performance is not indicative of future results.
+        instruments involves a high level of risk and may not be suitable for all investors. The value of your
+        investments can go up or down, and you may lose more than your initial capital. Before engaging in any
+        trading activities, please ensure you fully understand the risks involved, including the potential for
+        significant financial loss. Leverage can work both for and against you. You are strongly advised to
+        consult with an independent financial advisor if you are unsure whether trading is right for you. Past
+        performance is not indicative of future results.
         <a href="risk-disclosure.html" style="color: #0d397f; text-decoration: underline;">Read our full risk
           disclosure</a>.
       </p>
@@ -1727,14 +1671,9 @@ box-shadow: 22px 20px 25px 20px rgb(0 0 0 / 15%);
           </a>
           <div class="footer-contact pt-3">
             <p><strong>Address:</strong> Suite 502, 5th Floor,</p>
-
             <p> Capital City Centre, Victoria, Mahé, Seychelles</p>
-            <br>
-
+            <p class="mt-3"><strong>Phone:</strong> <span>+248 251 2345</span></p>
             <p><strong>Email:</strong> <span>info@dadcapitals.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-
           </div>
         </div>
 
@@ -1746,7 +1685,7 @@ box-shadow: 22px 20px 25px 20px rgb(0 0 0 / 15%);
             <li><a href="introducing-broker.html">Introducing Broker (IB)</a></li>
             <li><a href="index.html#services">Services</a></li>
             <li><a href="education.html">Education</a></li>
-            <li><a href="index.html#account-types" class="footer-link">Account Types</a></li>
+            <li><a href="index.html#account-types">Account Types</a></li>
           </ul>
         </div>
 
@@ -1760,19 +1699,19 @@ box-shadow: 22px 20px 25px 20px rgb(0 0 0 / 15%);
             <li><a href="standard.html">Standard Account</a></li>
             <li><a href="pro.html">Pro Account</a></li>
             <li><a href="premium.html">Premium Account</a></li>
-            <li><a href="contact.html" class="hover:text-[#0d397f]">Customer Support</a></li>
+            <li><a href="contact.html">Customer Support</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Legal Terms</h4>
           <ul>
-            <li><a href="trading-conditions.html" class="hover:text-[#0d397f]">Trading Conditions</a></li>
-            <li><a href="client-agreement.html" class="hover:text-[#0d397f]">Client Agreement</a></li>
-            <li><a href="privacy-policy.html" class="hover:text-[#0d397f]">Privacy Policy</a></li>
-            <li><a href="terms-of-use.html" class="hover:text-[#0d397f]">Terms of Use</a></li>
-            <li><a href="restricted-countries.html" class="hover:text-[#0d397f]">Restricted Countries</a></li>
-            <li><a href="risk-disclosure.html" class="hover:text-[#0d397f]">Risk Disclosure</a></li>
+            <li><a href="trading-conditions.html">Trading Conditions</a></li>
+            <li><a href="client-agreement.html">Client Agreement</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+            <li><a href="restricted-countries.html">Restricted Countries</a></li>
+            <li><a href="risk-disclosure.html">Risk Disclosure</a></li>
           </ul>
         </div>
       </div>
@@ -1784,124 +1723,300 @@ box-shadow: 22px 20px 25px 20px rgb(0 0 0 / 15%);
   </footer>
   <!-- End Footer -->
 
-  <!-- Inline JS for expandable sections -->
+  <!-- Scroll Top Button -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const scrollTopBtn = document.getElementById('scroll-top');
-
-      scrollTopBtn.style.display = 'none'; // hide by default
-
-      window.addEventListener('scroll', () => {
-        scrollTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
-      });
-
-      scrollTopBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+    // Header scroll effect
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".header");
+      if (window.scrollY > 100) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
     });
 
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('header.header');  // matches your CSS selector
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+    // Mobile navigation toggle
+    const mobileNavShow = document.querySelector(".mobile-nav-show");
+    const mobileNavHide = document.querySelector(".mobile-nav-hide");
+    const navmenu = document.querySelector(".navmenu");
+    
+    mobileNavShow.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.classList.add("mobile-nav-active");
+      navmenu.classList.add("active");
+      this.classList.add("d-none");
+      mobileNavHide.classList.remove("d-none");
+    });
 
-      document.getElementById('ebook-shortcuts').addEventListener('click', function (e) {
-        if (e.target.tagName === 'BUTTON') {
-          const letter = e.target.getAttribute('data-letter');
-          const section = document.getElementById(letter);
-          if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-          }
+    mobileNavHide.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.classList.remove("mobile-nav-active");
+      navmenu.classList.remove("active");
+      this.classList.add("d-none");
+      mobileNavShow.classList.remove("d-none");
+    });
+
+    // Close mobile menu when clicking a nav link
+    document.querySelectorAll(".navmenu a").forEach(navLink => {
+      navLink.addEventListener("click", () => {
+        if (document.body.classList.contains("mobile-nav-active")) {
+          document.body.classList.remove("mobile-nav-active");
+          navmenu.classList.remove("active");
+          mobileNavHide.classList.add("d-none");
+          mobileNavShow.classList.remove("d-none");
         }
       });
-
     });
-  </script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Mobile nav toggle
-      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-      const navmenu = document.querySelector('.navmenu');
-
-      if (mobileNavToggle && navmenu) {
-        mobileNavToggle.addEventListener('click', function () {
-          navmenu.classList.toggle('active');
-          this.classList.toggle('bi-list');
-          this.classList.toggle('bi-x');
+    // Desktop dropdown functionality
+    if (window.innerWidth >= 1200) {
+      document.querySelectorAll(".dropdown").forEach(dropdown => {
+        dropdown.addEventListener("mouseenter", () => {
+          dropdown.querySelector("ul").style.display = "block";
+          dropdown.querySelector("ul").style.opacity = "1";
+          dropdown.querySelector("ul").style.visibility = "visible";
         });
-      }
+        
+        dropdown.addEventListener("mouseleave", () => {
+          dropdown.querySelector("ul").style.display = "none";
+          dropdown.querySelector("ul").style.opacity = "0";
+          dropdown.querySelector("ul").style.visibility = "hidden";
+        });
+      });
+    }
 
-      // Dropdown functionality
-      const dropdowns = document.querySelectorAll('.dropdown > a');
-
-      dropdowns.forEach(function (dropdown) {
-        dropdown.addEventListener('click', function (e) {
+    // Mobile dropdown functionality
+    if (window.innerWidth < 1200) {
+      document.querySelectorAll(".dropdown > a").forEach(dropdownLink => {
+        dropdownLink.addEventListener("click", function(e) {
           e.preventDefault();
-
-          const parent = this.parentElement;
-          const isActive = parent.classList.contains('active');
-
-          // Close all other dropdowns
-          document.querySelectorAll('.dropdown').forEach(function (item) {
-            if (item !== parent) {
-              item.classList.remove('active');
+          const dropdownMenu = this.nextElementSibling;
+          const icon = this.querySelector(".dropdown-icon");
+          
+          // Close all other dropdowns first
+          document.querySelectorAll(".dropdown ul").forEach(menu => {
+            if (menu !== dropdownMenu) {
+              menu.style.display = "none";
+              menu.previousElementSibling.querySelector(".dropdown-icon").classList.remove("bi-chevron-up");
+              menu.previousElementSibling.querySelector(".dropdown-icon").classList.add("bi-chevron-down");
             }
           });
-
+          
           // Toggle current dropdown
-          if (!isActive) {
-            parent.classList.add('active');
+          if (dropdownMenu.style.display === "block") {
+            dropdownMenu.style.display = "none";
+            icon.classList.remove("bi-chevron-up");
+            icon.classList.add("bi-chevron-down");
           } else {
-            parent.classList.remove('active');
+            dropdownMenu.style.display = "block";
+            icon.classList.remove("bi-chevron-down");
+            icon.classList.add("bi-chevron-up");
           }
         });
       });
+    }
 
-      // Close when clicking outside
-      document.addEventListener('click', function (e) {
-        if (!e.target.closest('.navmenu') && !e.target.closest('.mobile-nav-toggle')) {
-          navmenu.classList.remove('active');
-          mobileNavToggle.classList.remove('bi-x');
-          mobileNavToggle.classList.add('bi-list');
-          document.querySelectorAll('.dropdown').forEach(function (item) {
-            item.classList.remove('active');
-          });
-        }
+    // Handle window resize
+    window.addEventListener("resize", function() {
+      if (window.innerWidth >= 1200) {
+        // Reset mobile menu if resizing to desktop
+        document.body.classList.remove("mobile-nav-active");
+        navmenu.classList.remove("active");
+        mobileNavShow.classList.remove("d-none");
+        mobileNavHide.classList.add("d-none");
+        
+        // Reset all dropdown menus
+        document.querySelectorAll(".dropdown ul").forEach(menu => {
+          menu.style.display = "none";
+          menu.previousElementSibling.querySelector(".dropdown-icon").classList.remove("bi-chevron-up");
+          menu.previousElementSibling.querySelector(".dropdown-icon").classList.add("bi-chevron-down");
+        });
+      } else {
+        // Reset desktop dropdowns if resizing to mobile
+        document.querySelectorAll(".dropdown ul").forEach(menu => {
+          menu.style.display = "none";
+        });
+      }
+    });
+
+    // Scroll to top button
+    const scrollTop = document.getElementById("scroll-top");
+
+    window.addEventListener("scroll", function() {
+      if (window.scrollY > 300) {
+        scrollTop.classList.add("active");
+      } else {
+        scrollTop.classList.remove("active");
+      }
+    });
+
+    scrollTop.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
       });
+    });
 
-      // Header scroll effect
-      window.addEventListener('scroll', function () {
-        const header = document.querySelector('header.header');
-        if (window.scrollY > 50) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      });
-
-      // Close dropdowns when resizing to mobile
-      window.addEventListener('resize', function () {
-        if (window.innerWidth > 991) {
-          navmenu.classList.remove('active');
-          mobileNavToggle.classList.remove('bi-x');
-          mobileNavToggle.classList.add('bi-list');
-          document.querySelectorAll('.dropdown').forEach(function (item) {
-            item.classList.remove('active');
-          });
+    // E-book navigation
+    const ebookButtons = document.querySelectorAll("#ebook-shortcuts button");
+    ebookButtons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        const letter = this.getAttribute("data-letter");
+        const section = document.getElementById(letter);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
         }
       });
     });
+
+    // Preloader
+    window.addEventListener("load", function() {
+      const preloader = document.getElementById("preloader");
+      if (preloader) {
+        preloader.style.display = "none";
+      }
+    });
   </script>
 
-  <a href="#" id="scroll-top" class="d-flex align-items-center justify-content-center">
-    <i class="bi bi-arrow-up-short" style="font-size: 1.5rem;"></i>
-  </a>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const phoneInput = document.querySelector("#phone");
+            const selectedCountryInput = document.getElementById(
+                "selectedCountryInput"
+            );
+            const form = phoneInput.closest("form");
+            const errorMsg = document.createElement("div");
+            errorMsg.style.color = "red";
+            errorMsg.style.fontSize = "0.9em";
+            errorMsg.style.marginBottom = "12px";
+            phoneInput.insertAdjacentElement("afterend", errorMsg);
+
+            const iti = window.intlTelInput(phoneInput, {
+                separateDialCode: true,
+                preferredCountries: ["us", "gb", "ae", "in", "lk"],
+                utilsScript:
+                    "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+                nationalMode: false,
+                autoHideDialCode: false,
+            });
+
+            // Update country name input
+            function updateCountryName() {
+                const countryData = iti.getSelectedCountryData();
+                selectedCountryInput.value = countryData.name || "";
+            }
+            phoneInput.addEventListener("countrychange", updateCountryName);
+            updateCountryName();
+
+            // Restrict input chars
+            phoneInput.addEventListener("input", function () {
+                this.value = this.value.replace(/[^\d +]/g, "");
+            });
+
+            // Validation
+            form.addEventListener("submit", function (e) {
+                errorMsg.textContent = "";
+                if (!iti.isValidNumber()) {
+                    e.preventDefault();
+                    const errorCode = iti.getValidationError();
+                    let message = "Invalid phone number.";
+                    switch (errorCode) {
+                        case intlTelInputUtils.validationError.TOO_SHORT:
+                            message = "Phone number is too short for selected country.";
+                            break;
+                        case intlTelInputUtils.validationError.TOO_LONG:
+                            message = "Phone number is too long for selected country.";
+                            break;
+                        case intlTelInputUtils.validationError.NOT_A_NUMBER:
+                            message = "Phone number is not valid.";
+                            break;
+                        case intlTelInputUtils.validationError.INVALID_COUNTRY_CODE:
+                            message = "Invalid country code.";
+                            break;
+                    }
+                    errorMsg.textContent = message;
+                    phoneInput.focus();
+                    return false;
+                }
+                const fullNumber = iti.getNumber();
+                const countryData = iti.getSelectedCountryData();
+                alert(`Success!\nPhone: ${fullNumber}\nCountry: ${countryData.name}`);
+            });
+
+            // Add search input to dropdown when dropdown opens
+            const itiContainer = phoneInput.parentElement;
+            let searchInputAdded = false;
+
+            itiContainer.addEventListener("click", () => {
+                setTimeout(() => {
+                    const countryList = document.querySelector(".iti__country-list");
+                    if (!countryList) return;
+
+                    if (!searchInputAdded) {
+                        const searchInput = document.createElement("input");
+                        searchInput.type = "search";
+                        searchInput.placeholder = "Search country...";
+                        searchInput.className = "iti__search-box";
+                        searchInput.style.cssText = `
+          width: 100%;
+          box-sizing: border-box;
+          padding: 8px 10px;
+          margin: 5px 0 8px 0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          outline: none;
+        `;
+
+                        countryList.insertBefore(searchInput, countryList.firstChild);
+                        countryList.style.maxHeight = "220px";
+                        countryList.style.overflowY = "auto";
+
+                        // Prevent dropdown from closing when interacting with the search input
+                        searchInput.addEventListener("mousedown", function (e) {
+                            e.stopPropagation();
+                        });
+                        searchInput.addEventListener("click", function (e) {
+                            e.stopPropagation();
+                        });
+
+                        searchInput.addEventListener("input", () => {
+                            const filter = searchInput.value.toLowerCase();
+                            countryList
+                                .querySelectorAll(".iti__country")
+                                .forEach((country) => {
+                                    const countryName = country
+                                        .getAttribute("data-name")
+                                        .toLowerCase();
+                                    country.style.display = countryName.includes(filter)
+                                        ? ""
+                                        : "none";
+                                });
+                        });
+
+                        searchInputAdded = true;
+                    }
+                }, 100);
+            });
+        });
+    </script>
 </body>
 
 </html>

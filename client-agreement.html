@@ -1,657 +1,881 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Client Agreement</title>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Client Agreement | DAD Capitals</title>
+
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600&family=Raleway:wght@400;500;700&display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-    <!-- Your original vendor and main CSS -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- Vendor CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
 
     <style>
-    /* Custom styles to integrate with your theme */
+        /* New Design Styles */
+        :root {
+            --primary-color: #0d397f;
+            --secondary-color: #8b0000;
+            --accent-color: #f5a623;
+            --light-bg: #f8f9fa;
+            --dark-text: #2c3e50;
+            --light-text: #7f8c8d;
+            --border-radius: 8px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
 
-    body {
-        background: #ffffff;
-        color: #eee;
-        font-family: 'Roboto', sans-serif;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
 
-    .content-wrapper {
-        background: rgba(156, 0, 0, 0.9);
-        padding: 2.5rem 3rem;
-        padding-left: 260px; /* added to avoid overlap with fixed TOC */
-        max-width: 900px;
-        margin: 100px auto 60px auto;
-        border-radius: 10px;
-        color: #eee;
-        box-shadow: 0 0 30px #8b0000;
-    }
-
-    .content-wrapper h1 {
-        color: #0d397f;
-        margin-bottom: 2rem;
-        font-weight: 700;
-        font-size: 2.5rem;
-    }
-
-    section {
-        margin-bottom: 4rem;
-    }
-
-    section h2 {
-        color: #0d397f;
-        border-bottom: 3px solid #0d397f;
-        padding-bottom: 0.3rem;
-        margin-bottom: 1rem;
-        font-weight: 700;
-        font-size: 1.8rem;
-    }
-
-    section p {
-        font-size: 1.05rem;
-        margin-bottom: 1rem;
-        line-height: 1.6;
-    }
-
-    /* License box */
-    .license-info {
-        background: #0d397f;
-        border: 1px solid #0d8200;
-        border-radius: 6px;
-        padding: 1.3rem 1.5rem;
-        margin: 2rem 0 2.5rem 0;
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 1rem;
-        color: #f5f5f5;
-    }
-
-    /* Back to top link */
-    .back-to-top {
-        display: inline-block;
-        margin-top: 1.5rem;
-        font-size: 1rem;
-        color: #9fdfb0;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .back-to-top:hover {
-        color: #0d397f;
-    }
-
-    /* TOC styling */
-    nav.toc {
-        position: fixed;
-        top: 100px; /* adjusted from 110px */
-        left: 15px;
-        width: 250px;
-        background: #cdcfd2;
-        padding: 1.5rem 1.8rem;
-        border-radius: 10px;
-        border: 1px solid #333;
-        max-height: 80vh;
-        overflow-y: auto;
-        font-size: 0.95rem;
-        transition: opacity 0.5s ease;
-        opacity: 1;
-        pointer-events: auto;
-        z-index: 1000;
-    }
-
-    nav.toc h3 {
-        color: #0d397f;
-        margin-top: 0;
-        margin-bottom: 1rem;
-        font-weight: 700;
-    }
-
-    nav.toc ul {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    nav.toc li {
-        margin-bottom: 1rem;
-    }
-
-    nav.toc a {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    nav.toc a:hover,
-    nav.toc a:focus {
-        color: #0d397f;
-        outline: none;
-    }
-
-    /* Responsive */
-    @media (max-width: 1000px) {
-        nav.toc {
-            position: static;
+        .agreement-hero {
+            background:
+                /* Dark overlay for better text readability */
+                linear-gradient(rgba(13, 57, 127, 0.8), rgba(139, 0, 0, 0.8)),
+                /* Background image */
+                url('assets/img/Client-Agreement.jpg') center/cover no-repeat;
+            color: white;
+            padding: 100px 0;
+            position: relative;
             width: 100%;
-            margin-bottom: 2rem;
-            max-height: none;
-            opacity: 1 !important;
-            pointer-events: auto !important;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
 
-        .content-wrapper {
-            margin: 40px auto 60px auto;
-            padding: 2rem 1.5rem; /* reset padding-left */
-            max-width: 100%;
-            border-radius: 0;
-            box-shadow: none;
+        .agreement-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/img/pattern.png') repeat;
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 1;
         }
 
-        /* Hide initial TOC style #toc if used */
-        #toc {
-            display: none !important;
+        .agreement-hero .container {
+            position: relative;
+            z-index: 2;
         }
-    }
-</style>
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade"
-        style="background-image: url('assets/img/Client-Agreement.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 300px; display: flex; align-items: center; position: relative; color: white; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);">
-        <div class="container position-relative" style="z-index: 2;">
-            <h1>Client Agreement</h1>
-            <p>This Client Agreement outlines the terms, responsibilities, and conditions that govern the
-                relationship between DAD Capitals and its clients, ensuring transparency, accountability, and mutual
-                understanding.</p>
-        </div>
-    </div>
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .agreement-hero {
+                height: 60vh;
+                padding: 80px 0;
+                background-position: 60% center;
+            }
+        }
+
+        .agreement-hero h1 {
+            font-weight: 700;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .agreement-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        .agreement-container {
+            max-width: 1200px;
+            margin: -40px auto 60px;
+            position: relative;
+        }
+
+        .agreement-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        /* TOC Sidebar */
+        .agreement-sidebar {
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+        }
+
+        .toc-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .toc-card h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .toc-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-links li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .toc-links li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            background: #0d397f;
+            border-radius: 50%;
+        }
+
+        .toc-links a {
+            color: var(--dark-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .toc-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        /* Content Sections */
+        .agreement-section {
+            margin-bottom: 50px;
+            scroll-margin-top: 120px;
+        }
+
+        .agreement-section h2 {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .agreement-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #0d397f;
+        }
+
+        .agreement-section p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        /* License Box */
+        .license-box {
+            background: rgba(13, 57, 127, 0.08);
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .license-box strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .back-to-top:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .agreement-sidebar {
+                position: static;
+                margin-bottom: 40px;
+            }
+
+            .agreement-container {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .agreement-hero {
+                padding: 80px 0 60px;
+                height: 60vh;
+            }
+
+            .agreement-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .agreement-hero p {
+
+                font-size: 0.8rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+            }
+
+            .agreement-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
+
 
 <body class="starter-page-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="DAD Capitals Logo" style="max-height: 40px; margin-right: 10px;" />
-      </a>
+    <!-- Header -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <img src="assets/img/logo.png" alt="DAD Capitals Logo" style="max-height: 40px; margin-right: 10px;">
+            </a>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-           <li><a href="introducing-broker.html">Introducing Broker</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li class="dropdown"><a href="javascript:void(0)"> <span> Legal Terms</span><i
-                class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="trading-conditions.html">Trading conditions</a></li>
-              <li><a href="client-agreement.html">Client agreement</a></li>
-              <li><a href="restricted-countries.html">Restricted countries</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="javascript:void(0)"><span>Account Types</span> <i
-                class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="standard.html">Standard Account</a></li>
-              <li><a href="pro.html">Pro Account</a></li>
-              <li><a href="premium.html">Premium Account</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="introducing-broker.html">Introducing Broker</a>
+                    </li>
+                    <li>
+                        <a href="education.html">Education</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">
+                            <span>Legal Terms</span>
+                            <i class="bi bi-chevron-down toggle-dropdown"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="trading-conditions.html">Trading conditions</a>
+                            </li>
+                            <li>
+                                <a href="client-agreement.html">Client agreement</a>
+                            </li>
+                            <li>
+                                <a href="restricted-countries.html">Restricted countries</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">
+                            <span>Account Types</span>
+                            <i class="bi bi-chevron-down toggle-dropdown"></i>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="standard.html">Standard Account</a>
+                            </li>
+                            <li>
+                                <a href="pro.html">Pro Account</a>
+                            </li>
+                            <li>
+                                <a href="premium.html">Premium Account</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="agreement-hero text-center" data-aos="fade">
+        <div class="container position-relative">
+            <h1>Client Agreement</h1>
+            <p>
+                This document outlines the terms, responsibilities, and conditions governing the relationship between
+                DAD
+                Capitals and its clients, ensuring transparency and mutual understanding.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Main Content -->
+    <div class="agreement-container">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar TOC -->
+                <div class="col-lg-4">
+                    <div class="agreement-sidebar">
+                        <div class="toc-card" data-aos="fade-up">
+                            <h3>Table of Contents</h3>
+                            <ul class="toc-links">
+                                <li>
+                                    <a href="#introduction">1. Introduction</a>
+                                </li>
+                                <li>
+                                    <a href="#definitions">2. Definitions</a>
+                                </li>
+                                <li>
+                                    <a href="#services">3. Services Provided</a>
+                                </li>
+                                <li>
+                                    <a href="#licenses">4. Licenses and Regulation</a>
+                                </li>
+                                <li>
+                                    <a href="#account-opening">5. Account Opening</a>
+                                </li>
+                                <li>
+                                    <a href="#client-obligations">6. Client Obligations</a>
+                                </li>
+                                <li>
+                                    <a href="#complaints-disputes">7. Complaints & Disputes</a>
+                                </li>
+                                <li>
+                                    <a href="#fees-charges">8. Fees and Charges</a>
+                                </li>
+                                <li>
+                                    <a href="#confidentiality">9. Confidentiality</a>
+                                </li>
+                                <li>
+                                    <a href="#termination">10. Termination</a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="toc-card" data-aos="fade-up" data-aos-delay="100">
+                            <h3>Need Help?</h3>
+                            <p>
+                                If you have questions about this agreement, our support team is available 24/5 to assist
+                                you.
+                            </p>
+                            <a href="contact.html" class="btn btn-primary w-100 mt-3">
+                                Contact Support
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Content -->
+                <div class="col-lg-8">
+                    <div class="agreement-card" data-aos="fade-up">
+                        <section id="introduction" class="agreement-section">
+                            <h2>1. Introduction</h2>
+                            <p>
+                                Welcome to DAD Capitals. This Client Agreement ("Agreement") establishes the terms and
+                                conditions under which you will use our trading services. By accessing or using our
+                                platform, you acknowledge that you have read, understood, and agree to be legally bound
+                                by all terms within this document.
+                            </p>
+                            <p>
+                                We reserve the right to modify this Agreement from time to time, and you will be
+                                notified
+                                of any changes accordingly. Continuing to use the services after updates signifies your
+                                acceptance of the revised terms.
+                            </p>
+                            <p>
+                                Our mission is to provide secure, efficient, and accessible trading opportunities to our
+                                clients worldwide while maintaining full compliance with all applicable laws and
+                                regulatory requirements.
+                            </p>
+                            <p>
+                                It is essential that you read this Agreement carefully. If you do not understand any
+                                part
+                                of it or if you disagree with the terms, please contact our support team before
+                                proceeding to use our services.
+                            </p>
+                        </section>
+
+
+                        <section id="definitions" class="agreement-section">
+                            <h2>2. Definitions</h2>
+                            <p>
+                                Throughout this Agreement, certain terms are defined to ensure clarity and precision in
+                                the rights and obligations of both parties.
+                            </p>
+                            <p>
+                                <strong>"DAD Capitals", "We", "Us", or "Our"</strong>
+                                refers to the brokerage firm
+                                providing trading services and managing your account.
+                            </p>
+                            <p>
+                                <strong>"Client", "You", or "Your"</strong>
+                                means any individual or legal entity who
+                                opens an account and utilizes our trading services.
+                            </p>
+                            <p>
+                                <strong>"Account"</strong>
+                                refers to the trading account opened by the Client, which
+                                enables access to our platform.
+                            </p>
+                            <p>
+                                <strong>"Agreement"</strong>
+                                encompasses this Client Agreement along with any amendments,
+                                supplements, or associated policies.
+                            </p>
+                        </section>
+
+
+                        <section id="services" class="agreement-section">
+                            <h2>3. Services Provided</h2>
+                            <p>
+                                DAD Capitals offers a range of online trading services designed to give Clients access
+                                to
+                                global financial markets. Our services include but are not limited to forex trading,
+                                contracts for difference (CFDs), stock trading, indices, commodities, and
+                                cryptocurrencies.
+                            </p>
+                            <p>
+                                We provide a proprietary and third-party trading platform accessible via web, desktop,
+                                and mobile devices, designed for ease of use, efficiency, and speed of execution.
+                            </p>
+                            <p>
+                                Clients can execute trades, manage positions, view market data, and access various
+                                analytical tools through our platform.
+                            </p>
+                            <p>
+                                Additionally, we offer educational resources, market analysis, and customer support to
+                                assist Clients in making informed trading decisions.
+                            </p>
+                        </section>
+
+
+                        <section id="licenses" class="agreement-section">
+                            <h2>4. Licenses and Regulation</h2>
+                            <p>
+                                DAD Capitals operates under strict regulatory supervision and holds licenses issued by
+                                recognized authorities to ensure compliance, transparency, and Client protection.
+                            </p>
+
+
+                            <div class="license-box">
+                                <strong>Financial Services Authority (FSA)</strong>
+                                License Number: SD073
+                                <br>
+                                Jurisdiction: Seychelles
+                            </div>
+
+
+                            <div class="license-box">
+                                <strong>Financial Services Commission (FSC)</strong>
+                                License Number: GB24206650
+                                <br>
+                                Jurisdiction: Mauritius
+                            </div>
+
+
+                            <p>
+                                These regulatory bodies oversee our operations, ensuring that Client funds are
+                                safeguarded, and that our practices conform to anti-money laundering (AML) and
+                                know-your-customer (KYC) standards.
+                            </p>
+                        </section>
+
+
+                        <section id="account-opening" class="agreement-section">
+                            <h2>5. Account Opening</h2>
+                            <p>
+                                To open an account with DAD Capitals, Clients must complete the registration process and
+                                provide all necessary documentation to comply with KYC and AML requirements.
+                            </p>
+                            <p>
+                                Applicants must be of legal age in their jurisdiction and possess the legal capacity to
+                                enter into contracts.
+                            </p>
+                            <p>
+                                During registration, Clients must provide accurate, complete, and up-to-date personal
+                                and
+                                financial information.
+                            </p>
+                            <p>
+                                Verification documents include government-issued identification, proof of address, and
+                                in
+                                some cases, proof of income or source of funds.
+                            </p>
+                        </section>
+
+
+                        <section id="client-obligations" class="agreement-section">
+                            <h2>6. Client Obligations</h2>
+                            <p>
+                                Clients agree to comply with all applicable laws, rules, and regulations governing their
+                                use of DAD Capitals' services.
+                            </p>
+                            <p>
+                                Clients must provide true, accurate, and complete information and update it as
+                                necessary.
+                            </p>
+                            <p>
+                                Clients must not use the platform for any illegal, fraudulent, or unethical purposes.
+                            </p>
+                            <p>
+                                Clients should familiarize themselves with the risks involved in trading leveraged
+                                financial instruments and trade responsibly.
+                            </p>
+                        </section>
+
+
+                        <section id="complaints-disputes" class="agreement-section">
+                            <h2>7. Complaints and Disputes</h2>
+                            <p>
+                                DAD Capitals is committed to maintaining the highest standards of service and client
+                                satisfaction. If you have any concerns or complaints about our services, we encourage
+                                you to contact our Customer Support team immediately.
+                            </p>
+                            <p>
+                                Clients should provide a clear description of the issue along with any supporting
+                                documents or evidence to help us understand and investigate the matter thoroughly.
+                            </p>
+                            <p>
+                                Upon receiving a complaint, DAD Capitals will acknowledge receipt within 3 business days
+                                and aim to resolve the issue promptly, generally within 15 business days.
+                            </p>
+                        </section>
+
+
+                        <section id="fees-charges" class="agreement-section">
+                            <h2>8. Fees and Charges</h2>
+                            <p>
+                                DAD Capitals charges fees for certain services, including spreads, commissions,
+                                overnight
+                                financing, and withdrawal fees as detailed below.
+                            </p>
+                            <p>
+                                Spreads represent the difference between the buy and sell price and vary by instrument
+                                and market conditions.
+                            </p>
+                            <p>
+                                Commissions may apply for certain account types or instruments and will be disclosed
+                                prior to trading.
+                            </p>
+                            <p>
+                                Overnight financing (swap fees) is charged for positions held overnight, calculated
+                                based
+                                on the notional value and interest rate differentials.
+                            </p>
+                        </section>
+
+
+                        <section id="confidentiality" class="agreement-section">
+                            <h2>9. Confidentiality</h2>
+                            <p>
+                                DAD Capitals is committed to protecting the confidentiality and security of Client
+                                information.
+                            </p>
+                            <p>
+                                All personal and financial data provided by Clients are stored securely using encryption
+                                and access controls.
+                            </p>
+                            <p>
+                                We will not disclose Client information to third parties except where required by law,
+                                regulatory authorities, or with Client consent.
+                            </p>
+                            <p>
+                                Clients should keep their account information confidential and not share login
+                                credentials with others.
+                            </p>
+                        </section>
+
+
+                        <section id="termination" class="agreement-section">
+                            <h2>10. Termination</h2>
+                            <p>
+                                Clients may terminate their relationship with DAD Capitals by closing their trading
+                                accounts and settling any outstanding balances.
+                            </p>
+                            <p>
+                                DAD Capitals reserves the right to suspend or terminate accounts for reasons including
+                                but not limited to breaches of this Agreement, fraudulent activity, regulatory
+                                non-compliance, or inactivity.
+                            </p>
+                            <p>
+                                Upon termination, Clients will receive final statements and any remaining funds after
+                                deductions of fees or liabilities.
+                            </p>
+                            <p>
+                                Termination does not relieve Clients from obligations incurred prior to closure.
+                            </p>
+
+
+                            <a href="#" class="back-to-top">
+                                Back to Top ↑
+                            </a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    
-  </header>
-
-    <!-- Table of Contents -->
-     
-    <nav id="toc" class="toc" aria-label="Table of Contents">
-        <h3>Contents</h3>
-        <ul>
-            <li><a href="#introduction">1. Introduction</a></li>
-            <li><a href="#definitions">2. Definitions</a></li>
-            <li><a href="#services">3. Services Provided</a></li>
-            <li><a href="#licenses">4. Licenses and Regulation</a></li>
-            <li><a href="#account-opening">5. Account Opening</a></li>
-            <li><a href="#client-obligations">6. Client Obligations</a></li>
-            <li><a href="#complaints-disputes">7. Complaints and Disputes</a></li>
-            <li><a href="#fees-charges">8. Fees and Charges</a></li>
-            <li><a href="#confidentiality">9. Confidentiality</a></li>
-            <li><a href="#termination">10. Termination</a></li>
-        </ul>
-    </nav>
-
-<!-- Main content wrapper -->
-<main style="max-width: 1000px; margin: 40px 0 40px auto; background-color: white; padding: 40px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
 
 
-                    <section id="introduction" tabindex="-1">
-                    <h2>1. Introduction</h2>
-                    <p>Welcome to DAD Capitals. This Client Agreement (“Agreement”) establishes the terms and conditions
-                        under which you will use our trading services. By accessing or using our platform, you
-                        acknowledge that you have read, understood, and agree to be legally bound by all terms within
-                        this document. The Agreement is designed to protect both your interests and ours, ensuring a
-                        transparent and fair trading environment.</p>
-                    <p>We reserve the right to modify this Agreement from time to time, and you will be notified of any
-                        changes accordingly. Continuing to use the services after updates signifies your acceptance of
-                        the revised terms.</p>
-                    <p>Our mission is to provide secure, efficient, and accessible trading opportunities to our clients
-                        worldwide while maintaining full compliance with all applicable laws and regulatory
-                        requirements.</p>
-                    <p>It is essential that you read this Agreement carefully. If you do not understand any part of it
-                        or if you disagree with the terms, please contact our support team before proceeding to use our
-                        services.</p>
-                    <p>Your use of our services signifies your acceptance and agreement to the terms outlined here. If
-                        you do not agree to these terms, you must refrain from opening an account or transacting through
-                        our platform.</p>
-                    <p>This Agreement supplements and does not replace other important documents such as our Risk
-                        Disclosure Statement, Privacy Policy, and Trading Conditions, which collectively govern your
-                        relationship with DAD Capitals.</p>
-                    <p>All terms, conditions, and disclaimers herein are intended to provide you with a comprehensive
-                        understanding of our services and your responsibilities as a client.</p>
-                    <p>By opening an account with DAD Capitals, you confirm that you meet all eligibility criteria and
-                        regulatory requirements necessary to trade on our platform.</p>
-                    <p>Please ensure that you retain a copy of this Agreement for your records. You may access it at any
-                        time on our website or request a copy from our customer service.</p>
-                    <p>Thank you for choosing DAD Capitals. We look forward to a mutually beneficial relationship built
-                        on trust, transparency, and professionalism.</p>
-                </section>
-
-                <section id="definitions" tabindex="-1">
-                    <h2>2. Definitions</h2>
-                    <p>Throughout this Agreement, certain terms are defined to ensure clarity and precision in the
-                        rights and obligations of both parties.</p>
-                    <p><strong>"DAD Capitals", "We", "Us", or "Our"</strong> refers to the brokerage firm providing
-                        trading services and managing your account.</p>
-                    <p><strong>"Client", "You", or "Your"</strong> means any individual or legal entity who opens an
-                        account and utilizes our trading services.</p>
-                    <p><strong>"Account"</strong> refers to the trading account opened by the Client, which enables
-                        access to our platform.</p>
-                    <p><strong>"Agreement"</strong> encompasses this Client Agreement along with any amendments,
-                        supplements, or associated policies.</p>
-                    <p><strong>"Trading Platform"</strong> means the online software provided by DAD Capitals that
-                        facilitates trading activities.</p>
-                    <p><strong>"Financial Instruments"</strong> includes forex, CFDs, stocks, indices, cryptocurrencies,
-                        commodities, and any other assets offered for trading.</p>
-                    <p><strong>"Leverage"</strong> describes the ability to control a large position with a relatively
-                        small amount of capital.</p>
-                    <p><strong>"Margin"</strong> is the minimum amount required to open or maintain a leveraged
-                        position.</p>
-                    <p><strong>"Order"</strong> refers to instructions submitted by the Client to buy, sell, or modify
-                        positions on the Trading Platform.</p>
-                    <p><strong>"Execution"</strong> means the process of fulfilling an Order at a specified price or
-                        market conditions.</p>
-                    <p><strong>"Regulatory Authorities"</strong> are the official bodies overseeing financial markets
-                        and brokerage firms to ensure compliance with laws and protect investors.</p>
-                    <p><strong>"Confidential Information"</strong> includes any personal, financial, or trading data
-                        exchanged between the Client and DAD Capitals.</p>
-                    <p>The above definitions serve as a reference point throughout this Agreement and are critical for
-                        understanding the rights and responsibilities involved.</p>
-                </section>
-
-                <section id="services" tabindex="-1">
-                    <h2>3. Services Provided</h2>
-                    <p>DAD Capitals offers a range of online trading services designed to give Clients access to global
-                        financial markets. Our services include but are not limited to forex trading, contracts for
-                        difference (CFDs), stock trading, indices, commodities, and cryptocurrencies.</p>
-                    <p>We provide a proprietary and third-party trading platform accessible via web, desktop, and mobile
-                        devices, designed for ease of use, efficiency, and speed of execution.</p>
-                    <p>Clients can execute trades, manage positions, view market data, and access various analytical
-                        tools through our platform.</p>
-                    <p>Additionally, we offer educational resources, market analysis, and customer support to assist
-                        Clients in making informed trading decisions.</p>
-                    <p>Our services are subject to market conditions, and we do not guarantee profits or protection from
-                        losses.</p>
-                    <p>We reserve the right to introduce new products or remove existing ones based on market demand,
-                        regulatory changes, or internal policies.</p>
-                    <p>Trading hours and order execution are subject to the hours and conditions of the relevant markets
-                        and exchanges.</p>
-                    <p>We do not provide investment advice or personalized recommendations. Clients trade at their own
-                        risk.</p>
-                    <p>Our platform employs robust security measures to safeguard Client accounts and personal data,
-                        including encryption, two-factor authentication, and secure servers.</p>
-                    <p>Clients are responsible for ensuring their equipment and internet connections are sufficient for
-                        using our trading services reliably.</p>
-                    <p>We may provide margin trading facilities, subject to margin requirements, leverage limits, and
-                        risk management procedures.</p>
-                    <p>All transactions are subject to applicable laws, taxes, and fees as disclosed in this Agreement.
-                    </p>
-                </section>
-
-                <section id="licenses" tabindex="-1">
-                    <h2>4. Licenses and Regulation</h2>
-                    <p>DAD Capitals operates under strict regulatory supervision and holds licenses issued by recognized
-                        authorities to ensure compliance, transparency, and Client protection.</p>
-                    <p>Our commitment to regulation ensures that we maintain high standards of financial integrity, data
-                        protection, and operational transparency.</p>
-                    <p>Our primary regulatory licenses include:</p>
-                    <div class="license-info">
-                        <p><strong>Financial Services Authority (FSA)</strong><br />License Number:
-                            SD073<br/>Jurisdiction: Seychelles <br/>
-                    </div>
-                    <div class="license-info">
-                        <p><strong>Financial Services Commission (FSC)</strong><br />License Number:
-                            GB24206650<br/>Jurisdiction: Mauritius <br/>
-                    </div>
-                    <p>These regulatory bodies oversee our operations, ensuring that Client funds are safeguarded, and
-                        that our practices conform to anti-money laundering (AML) and know-your-customer (KYC)
-                        standards.</p>
-                    <p>Clients can request copies of our licenses and regulatory status at any time.</p>
-                    <p>Non-compliance with regulatory requirements can result in account restrictions or termination.
-                    </p>
-                    <p>We conduct regular internal and external audits to maintain our compliance and operational
-                        standards.</p>
-                    <p>In case of any disputes or complaints, Clients may contact the regulatory authorities listed
-                        above for resolution assistance.</p>
-                    <p>Clients acknowledge that regulatory frameworks may vary by jurisdiction and accept that certain
-                        services may be restricted based on Client location.</p>
-                    <p>We will notify Clients promptly of any significant changes to our regulatory status or licensing.
-                    </p>
-                </section>
-
-                <section id="account-opening" tabindex="-1">
-                    <h2>5. Account Opening</h2>
-                    <p>To open an account with DAD Capitals, Clients must complete the registration process and provide
-                        all necessary documentation to comply with KYC and AML requirements.</p>
-                    <p>Applicants must be of legal age in their jurisdiction and possess the legal capacity to enter
-                        into contracts.</p>
-                    <p>During registration, Clients must provide accurate, complete, and up-to-date personal and
-                        financial information.</p>
-                    <p>Verification documents include government-issued identification, proof of address, and in some
-                        cases, proof of income or source of funds.</p>
-                    <p>Failure to provide valid documents may delay account approval or result in rejection.</p>
-                    <p>Once verified, Clients will receive login credentials to access their trading accounts.</p>
-                    <p>Clients are responsible for maintaining the confidentiality of their account information and
-                        passwords.</p>
-                    <p>Any unauthorized use of the account must be reported immediately to DAD Capitals.</p>
-                    <p>We reserve the right to refuse account opening at our discretion without providing reasons.</p>
-                    <p>Clients may only hold one trading account unless otherwise authorized by DAD Capitals.</p>
-                    <p>Funding of accounts must be done using approved payment methods, and all deposits and withdrawals
-                        will be processed subject to our policies.</p>
-                    <p>Clients must notify us promptly of any changes in their personal or financial information.</p>
-                    <p>Opening an account constitutes acceptance of this Agreement and all associated policies.</p>
-                </section>
-
-                <section id="client-obligations" tabindex="-1">
-                    <h2>6. Client Obligations</h2>
-                    <p>Clients agree to comply with all applicable laws, rules, and regulations governing their use of
-                        DAD Capitals’ services.</p>
-                    <p>Clients must provide true, accurate, and complete information and update it as necessary.</p>
-                    <p>Clients must not use the platform for any illegal, fraudulent, or unethical purposes.</p>
-                    <p>Clients should familiarize themselves with the risks involved in trading leveraged financial
-                        instruments and trade responsibly.</p>
-                    <p>Clients must not engage in activities that could harm the platform, including but not limited to
-                        hacking, spamming, or manipulating trading data.</p>
-                    <p>Any instructions submitted through the platform must be authorized by the Client.</p>
-                    <p>Clients are responsible for the security of their login credentials and account details.</p>
-                    <p>Clients must promptly notify DAD Capitals of any suspicious account activity or unauthorized use.
-                    </p>
-                    <p>Clients acknowledge that all trades are final and binding once executed, except in cases of error
-                        or platform malfunction.</p>
-                    <p>Clients are responsible for all tax obligations arising from their trading activity.</p>
-                    <p>Clients must cooperate with any investigations conducted by DAD Capitals or regulatory
-                        authorities.</p>
-                    <p>Violation of these obligations may result in suspension, termination, or legal action.</p>
-                    <p>Clients agree to indemnify and hold DAD Capitals harmless from any losses resulting from their
-                        breach of obligations.</p>
-                </section>
-
-                <section id="complaints-disputes" tabindex="-1">
-                    <h2>7. Complaints and Disputes</h2>
-                    <p>DAD Capitals is committed to maintaining the highest standards of service and client
-                        satisfaction. If you have any concerns or complaints about our services, we encourage you to
-                        contact our Customer Support team immediately.</p>
-                    <p>Clients should provide a clear description of the issue along with any supporting documents or
-                        evidence to help us understand and investigate the matter thoroughly.</p>
-                    <p>Upon receiving a complaint, DAD Capitals will acknowledge receipt within 3 business days and aim
-                        to resolve the issue promptly, generally within 15 business days.</p>
-                    <p>In the event that a complaint requires further investigation, we will keep Clients informed of
-                        the progress and expected timelines.</p>
-                    <p>If Clients are dissatisfied with the outcome of the internal complaint process, they may escalate
-                        the matter to relevant regulatory bodies or use alternative dispute resolution services
-                        available in their jurisdiction.</p>
-                    <p>DAD Capitals pledges to handle all complaints impartially, fairly, and in accordance with
-                        applicable laws and regulations.</p>
-                    <p>Clients are expected to cooperate by providing accurate information and responding to requests in
-                        a timely manner to facilitate effective resolution.</p>
-                    <p>Repeated or frivolous complaints may be subject to review and may affect the Client’s
-                        relationship with DAD Capitals.</p>
-                    <p>We value your feedback as it helps us improve our services and maintain trust with our Clients.
-                    </p>
-                    <p>For detailed procedures on submitting complaints, please refer to our Customer Support page or
-                        contact our Data Protection Officer for privacy-related concerns.</p>
-                    <p>DAD Capitals will retain records of all complaints and resolutions in accordance with legal and
-                        regulatory requirements.</p>
-                    <p>We thank you for your cooperation and understanding throughout the dispute resolution process.
-                    </p>
-                </section>
-
-                <section id="fees-charges" tabindex="-1">
-                    <h2>8. Fees and Charges</h2>
-                    <p>DAD Capitals charges fees for certain services, including spreads, commissions, overnight
-                        financing, and withdrawal fees as detailed below.</p>
-                    <p>Spreads represent the difference between the buy and sell price and vary by instrument and market
-                        conditions.</p>
-                    <p>Commissions may apply for certain account types or instruments and will be disclosed prior to
-                        trading.</p>
-                    <p>Overnight financing (swap fees) is charged for positions held overnight, calculated based on the
-                        notional value and interest rate differentials.</p>
-                    <p>Withdrawal fees may apply depending on the payment method and amount.</p>
-                    <p>Clients are responsible for any bank or intermediary fees associated with deposits or
-                        withdrawals.</p>
-                    <p>All fees are disclosed transparently on the platform and website.</p>
-                    <p>DAD Capitals reserves the right to modify fees at any time with prior notice.</p>
-                    <p>Failure to pay fees may result in account suspension or closure.</p>
-                    <p>Clients should review fee schedules regularly and contact support for clarification.</p>
-                    <p>Taxes applicable on fees and profits are the Client’s responsibility.</p>
-                    <p>We may offer promotions or fee discounts periodically; terms and conditions apply.</p>
-                    <p>Clients are encouraged to monitor their statements for fee details.</p>
-                </section>
-
-                <section id="confidentiality" tabindex="-1">
-                    <h2>9. Confidentiality</h2>
-                    <p>DAD Capitals is committed to protecting the confidentiality and security of Client information.
-                    </p>
-                    <p>All personal and financial data provided by Clients are stored securely using encryption and
-                        access controls.</p>
-                    <p>We will not disclose Client information to third parties except where required by law, regulatory
-                        authorities, or with Client consent.</p>
-                    <p>Clients should keep their account information confidential and not share login credentials with
-                        others.</p>
-                    <p>In case of suspected unauthorized access, Clients must notify us immediately.</p>
-                    <p>Data may be processed in jurisdictions outside the Client’s country in accordance with applicable
-                        data protection laws.</p>
-                    <p>DAD Capitals uses cookies and tracking technologies to enhance service delivery; details are
-                        outlined in our Privacy Policy.</p>
-                    <p>Clients have the right to access, correct, or delete their personal data as permitted by law.</p>
-                    <p>We retain Client data only as long as necessary for business, legal, or regulatory purposes.</p>
-                    <p>Security breaches will be addressed promptly, and affected Clients will be informed as required.
-                    </p>
-                    <p>Clients acknowledge and consent to these confidentiality terms by using our services.</p>
-                    <p>Questions or concerns about data privacy should be directed to our Data Protection Officer.</p>
-                </section>
-
-                <section id="termination" tabindex="-1">
-                    <h2>10. Termination</h2>
-                    <p>Clients may terminate their relationship with DAD Capitals by closing their trading accounts and
-                        settling any outstanding balances.</p>
-                    <p>DAD Capitals reserves the right to suspend or terminate accounts for reasons including but not
-                        limited to breaches of this Agreement, fraudulent activity, regulatory non-compliance, or
-                        inactivity.</p>
-                    <p>Upon termination, Clients will receive final statements and any remaining funds after deductions
-                        of fees or liabilities.</p>
-                    <p>Termination does not relieve Clients from obligations incurred prior to closure.</p>
-                    <p>We may retain Client information for regulatory or legal purposes post termination.</p>
-                    <p>Clients must return or destroy any proprietary materials provided by DAD Capitals.</p>
-                    <p>Termination does not limit our right to take legal action if necessary.</p>
-                    <p>Clients should notify us of intent to terminate in writing.</p>
-                    <p>All outstanding trades and positions must be closed or transferred prior to termination.</p>
-                    <p>Termination is effective upon confirmation by DAD Capitals.</p>
-                    <p>Clients are encouraged to review this Agreement and contact support with questions before
-                        terminating.</p>
-                    <p>We thank you for your trust and cooperation during our business relationship.</p>
-                </section>
-
-    </main>
-
-    <!-- Your original footer -->
+    <!-- Footer -->
     <footer id="footer" class="footer dark-background">
-
         <div class="container footer-top">
-
             <p style="font-size: 13px; color: #ccc; line-height: 1.7; max-width: auto; margin: 0 auto 30px auto;">
-                <strong>Risk Disclosure:</strong> Trading in forex, cryptocurrencies, commodities, and other financial
+                <strong>Risk Disclosure:</strong>
+                Trading in forex, cryptocurrencies, commodities, and other financial
                 instruments involves a high level of risk and may not be suitable for all investors. The value of your
                 investments can go up or down, and you may lose more than your initial capital. Before engaging in any
-                trading
-                activities, please ensure you fully understand the risks involved, including the potential for
-                significant
-                financial loss. Leverage can work both for and against you. You are strongly advised to consult with an
-                independent financial advisor if you are unsure whether trading is right for you. Past performance is
-                not
-                indicative of future results.
-                <a href="risk-disclosure.html" style="color: #0d397f; text-decoration: underline;">Read our full risk
-                    disclosure</a>.
-            </p>
+                trading activities, please ensure you fully understand the risks involved, including the potential for
+                significant financial loss. Leverage can work both for and against you. You are strongly advised to
+                consult with an independent financial advisor if you are unsure whether trading is right for you. Past
+                performance is not indicative of future results.
+                <a href="risk-disclosure.html" style="color: #0d397f; text-decoration: underline;">
+                    Read our full risk
+                    disclosure
+                </a>
+                .
             </p>
 
 
-<div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">DAD Capitals</span>
-          </a>
-          <div class="footer-contact pt-3">
-          <p>  <strong>Address:</strong> Suite 502, 5th Floor,</p>
-            
-            <p> Capital City Centre, Victoria, Mahé, Seychelles</p>
-            <br>
-            <p><strong>Email:</strong> <span>info@dadcapitals.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            
-          </div>
-        </div>
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6 footer-about">
+                    <a href="index.html" class="logo d-flex align-items-center">
+                        <span class="sitename">DAD Capitals</span>
+                    </a>
+                    <div class="footer-contact pt-3">
+                        <p>
+                            <strong>Address:</strong>
+                            Suite 502, 5th Floor,
+                        </p>
+                        <p>
+                            Capital City Centre, Victoria, Mahé, Seychelles
+                        </p>
+                        <br>
+                        <p>
+                            <strong>Email:</strong>
+                            <span>info@dadcapitals.com</span>
+                        </p>
+                    </div>
+                    <div class="social-links d-flex mt-4"></div>
+                </div>
+
 
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4>Primary Menu</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#about">About us</a></li>
-                         <li><a href="introducing-broker.html">Introducing Broker (IB)</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="education.html">Education</a></li>
-                        <li><a href="index.html#account-types" class="footer-link">Account Types</a></li>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="index.html#about">About us</a>
+                        </li>
+                        <li>
+                            <a href="introducing-broker.html">Introducing Broker (IB)</a>
+                        </li>
+                        <li>
+                            <a href="index.html#services">Services</a>
+                        </li>
+                        <li>
+                            <a href="education.html">Education</a>
+                        </li>
+                        <li>
+                            <a href="index.html#account-types" class="footer-link">
+                                Account Types
+                            </a>
+                        </li>
                     </ul>
                 </div>
+
 
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4 class="font-semibold mb-3 text-gray-900">Our Services</h4>
                     <ul class="space-y-1 text-gray-600 text-sm">
-                        <li><a href="trading-conditions.html#forex">Forex Trading</a></li>
-                        <li><a href="trading-conditions.html#indices">CFD Trading</a></li>
-                        <li><a href="trading-conditions.html#shares">Shares & ETFs</a></li>
-                        <li><a href="trading-conditions.html#general">General Conditions</a></li>
-                        <li><a href="standard.html">Standard Account</a></li>
-                        <li><a href="pro.html">Pro Account</a></li>
-                        <li><a href="premium.html">Premium Account</a></li>
-                        <li><a href="contact.html" class="hover:text-[#0d397f]">Customer Support</a></li>
+                        <li>
+                            <a href="trading-conditions.html#forex">Forex Trading</a>
+                        </li>
+                        <li>
+                            <a href="trading-conditions.html#indices">CFD Trading</a>
+                        </li>
+                        <li>
+                            <a href="trading-conditions.html#shares">Shares & ETFs</a>
+                        </li>
+                        <li>
+                            <a href="trading-conditions.html#general">General Conditions</a>
+                        </li>
+                        <li>
+                            <a href="standard.html">Standard Account</a>
+                        </li>
+                        <li>
+                            <a href="pro.html">Pro Account</a>
+                        </li>
+                        <li>
+                            <a href="premium.html">Premium Account</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="hover:text-[#0d397f]">
+                                Customer Support
+                            </a>
+                        </li>
                     </ul>
                 </div>
+
 
                 <div class="col-lg-2 col-md-3 footer-links">
                     <h4 class="font-semibold mb-3 text-gray-900">Legal Terms</h4>
                     <ul class="space-y-1 text-gray-600 text-sm">
-                        <li><a href="trading-conditions.html" class="hover:text-[#0d397f]">Trading Conditions</a></li>
-                        <li><a href="client-agreement.html" class="hover:text-[#0d397f]">Client Agreement</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-[#0d397f]">Privacy Policy</a></li>
-                        <li><a href="terms-of-use.html" class="hover:text-[#0d397f]">Terms of Use</a></li>
-                        <li><a href="restricted-countries.html" class="hover:text-[#0d397f]">Restricted Countries</a>
-                        <li><a href="risk-disclosure.html" class="hover:text-[#0d397f]">Risk Disclosure</a></li>
+                        <li>
+                            <a href="trading-conditions.html" class="hover:text-[#0d397f]">
+                                Trading Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="client-agreement.html" class="hover:text-[#0d397f]">
+                                Client Agreement
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy-policy.html" class="hover:text-[#0d397f]">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="terms-of-use.html" class="hover:text-[#0d397f]">
+                                Terms of Use
+                            </a>
+                        </li>
+                        <li>
+                            <a href="restricted-countries.html" class="hover:text-[#0d397f]">
+                                Restricted Countries
+                            </a>
+                        </li>
+                        <li>
+                            <a href="risk-disclosure.html" class="hover:text-[#0d397f]">
+                                Risk Disclosure
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="container copyright text-center mt-4">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">DAD Capitals</strong> <span>All Rights
-                    Reserved</span>
-            </p>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you've purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-            </div>
-        </div>
 
+        <div class="container copyright text-center mt-4">
+            <p>
+                ©
+                <span>Copyright</span>
+                <strong class="px-1 sitename">DAD Capitals</strong>
+                <span>
+                    All Rights
+                    Reserved
+                </span>
+            </p>
+            <div class="credits"></div>
+        </div>
     </footer>
 
+
     <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
 
     <!-- Preloader -->
     <div id="preloader"></div>
 
+
+    <!-- Vendor JS -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+    <!-- Main JS -->
     <script src="assets/js/main.js"></script>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const toc = document.getElementById('toc');
-    const introSection = document.getElementById('introduction');
-    const terminationSection = document.getElementById('termination');
 
-    if (!toc || !introSection || !terminationSection) return;
+    <!-- TOC Scroll Spy -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const sections = document.querySelectorAll('.agreement-section');
+            const navLinks = document.querySelectorAll('.toc-links a');
 
-    function updateTocVisibility() {
-        const scrollY = window.scrollY || window.pageYOffset;
-        const viewportHeight = window.innerHeight;
+            window.addEventListener('scroll', function () {
+                let current = '';
 
-        const introBottom = introSection.offsetTop + introSection.offsetHeight;
-        const terminationBottom = terminationSection.offsetTop + terminationSection.offsetHeight;
-        const viewportBottom = scrollY + viewportHeight;
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
 
-        if (scrollY > introBottom && viewportBottom < terminationBottom) {
-            toc.style.opacity = '1';
-            toc.style.pointerEvents = 'auto';
-            toc.style.display = 'block';  // Make visible on load or scroll
-        } else {
-            toc.style.opacity = '0';
-            toc.style.pointerEvents = 'none';
-            // Optionally keep display block to avoid layout shift, or use none to hide completely:
-            // toc.style.display = 'none';
-        }
-    }
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
 
-    window.addEventListener('scroll', updateTocVisibility);
-
-    // Run once on page load to fix initial TOC state
-    updateTocVisibility();
-});
-</script>
-
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                        link.style.color = 'var(--primary-color)';
+                        link.style.fontWeight = '600';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
+
 
 </html>
